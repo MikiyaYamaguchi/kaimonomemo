@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <div class="content_top_area">
+      <i class="el-icon-share" @click="shareDialog = true"></i>
       <p class="item_count">
         {{ checkedItemCount }}/{{ ItemListArray.length }}
       </p>
@@ -76,6 +77,42 @@
         >
       </div>
     </el-dialog>
+    <el-dialog
+      title="買い物内容をシェアしますか？"
+      class="share_dialog"
+      :visible.sync="shareDialog"
+    >
+      <div slot="footer" class="dialog-footer">
+        <el-button @click="shareDialog = false">戻る</el-button>
+        <el-button type="primary" @click="shareDialog2 = true"
+          >シェアする</el-button
+        >
+      </div>
+      <el-dialog
+        title="下記URLをコピーしてシェアしましょう"
+        :visible.sync="shareDialog2"
+        class="inner_dialog"
+        append-to-body
+      >
+        <el-input
+          placeholder="カレーライス、調味料 etc..."
+          v-model="share_url_value"
+          readonly
+        ></el-input>
+        <div slot="footer" class="dialog-footer">
+          <el-button
+            type="primary"
+            v-bind:style="{
+              background: '#ffa500',
+              borderColor: '#ffa500',
+              color: '#222',
+            }"
+            @click="copyShareUrl(share_url_value)"
+            >コピーする</el-button
+          >
+        </div>
+      </el-dialog>
+    </el-dialog>
   </div>
 </template>
 
@@ -91,9 +128,12 @@ export default Vue.extend({
       dialogVisible: false,
       innerDialog: false,
       finishDialog: false,
+      shareDialog: false,
+      shareDialog2: false,
       form_type: false,
       form_value: "",
-      catSelectVal: null
+      catSelectVal: null,
+      share_url_value: "http://www.test.com"
     };
   },
   computed: {
@@ -173,6 +213,15 @@ export default Vue.extend({
     deleteData () {
       this.$store.commit("deleteData");
       this.finishDialog = false;
+    },
+    copyShareUrl (url) {
+      navigator.clipboard.writeText(url)
+        .then(() => {
+          alert("コピーしました")
+        })
+        .catch(e => {
+          console.error(e)
+        })
     }
   },
 });
@@ -199,6 +248,7 @@ export default Vue.extend({
     }
     .item_count {
       margin: 0;
+      margin-left: 2%;
     }
     .finish_btn {
       display: inline-block;
@@ -229,6 +279,10 @@ export default Vue.extend({
           box-shadow: 0px 4px 0px 0px orange;
         }
       }
+    }
+    .el-icon-share {
+      cursor: pointer;
+      font-size: 25px;
     }
     .el-icon-plus {
       cursor: pointer;
@@ -326,6 +380,7 @@ export default Vue.extend({
       margin: 1% 1% 0 !important;
       margin-right: 0;
       margin: 6px 0;
+      z-index: 1;
     }
   }
   @media screen and (max-width: 767px) {

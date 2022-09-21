@@ -87,16 +87,8 @@ export const mutations = {
       state.finishBtnActive = true;
     }
   },
-  renameItemList: (state, id, new_name) => {
-    let itemListArray = state.itemList.filter(function (item, index) {
-      if (item.type == "item") return item;
-    });
-    for (let i = 0; i < itemListArray.length; i++) {
-      if (String(state.itemList[i].id).indexOf(id) !== -1) {
-        state.itemList[i].param = new_name;
-        return;
-      }
-    }
+  renameItemList: (state, { id, new_name }) => {
+    state.itemList.find((e) => e.id === id).param = new_name;
   },
   deleteData: (state) => {
     state.itemList = [];

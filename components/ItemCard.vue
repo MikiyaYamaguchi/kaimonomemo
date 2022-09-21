@@ -6,24 +6,23 @@
       v-on:change="checkItem"
       border
     ></el-checkbox>
-    <span class="edit" @click="renameDialogVisible = true"
-      ><i class="el-icon-edit"></i
-    ></span>
-    <span class="close" @click="removeItem"><i class="el-icon-close"></i></span>
-    <el-dialog
-      :visible.sync="renameDialogVisible"
-      width="50%"
-      :options="{ animation: 300, handle: '.handle' }"
-    >
+    <el-popover placement="top" width="280" v-model="popupVisible">
+      <p>{{ popupTitle }}</p>
       <div>
-        <p class="item_rename_dialog_title">商品名</p>
         <el-input
-          placeholder="じゃがいも、鳥もも肉 etc..."
+          :placeholder="popupPlaceholder"
           v-model="renameValue"
         ></el-input>
-        <el-button class="add_btn" @click="renameItem">追加する</el-button>
+        <el-button
+          class="rename_btn"
+          @click="renameItem"
+          v-bind:style="{ marginTop: '3%' }"
+          >変更する</el-button
+        >
       </div>
-    </el-dialog>
+      <span class="edit" slot="reference"><i class="el-icon-edit"></i></span>
+    </el-popover>
+    <span class="close" @click="removeItem"><i class="el-icon-close"></i></span>
   </div>
 </template>
 
@@ -46,6 +45,9 @@ export default Vue.extend({
     return {
       renameDialogVisible: false,
       renameValue: "",
+      popupVisible: false,
+      popupTitle: "商品名を編集",
+      popupPlaceholder: "じゃがいも、鳥もも肉 etc..."
     }
   },
   computed: {
@@ -63,7 +65,8 @@ export default Vue.extend({
       this.$store.commit("deleteItemList", this.itemId);
     },
     renameItem () {
-      this.$store.commit("renameItemList", this.itemId, this.renameValue);
+      this.$store.commit("renameItemList", { id: this.itemId, new_name: this.renameValue });
+      this.popupVisible = false;
     },
     checkItem () {
       if (this.itemType == "item") {
@@ -73,6 +76,12 @@ export default Vue.extend({
           this.$store.commit("takeCheckedCount");
         }
       }
+    }
+  },
+  mounted () {
+    if (this.itemType == "cat") {
+      this.popupTitle = "カテゴリー名を編集";
+      this.popupPlaceholder = "カレーライス、調味料 etc...";
     }
   }
 })
