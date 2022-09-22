@@ -84,9 +84,7 @@
     >
       <div slot="footer" class="dialog-footer">
         <el-button @click="shareDialog = false">戻る</el-button>
-        <el-button type="primary" @click="shareDialog2 = true"
-          >シェアする</el-button
-        >
+        <el-button type="primary" @click="postData">シェアする</el-button>
       </div>
       <el-dialog
         title="下記URLをコピーしてシェアしましょう"
@@ -119,6 +117,7 @@
 <script>
 import Vue from "vue";
 import draggable from "vuedraggable";
+import kaimonomemoApi from "~/api/index";
 
 export default Vue.extend({
   layout: "default",
@@ -167,6 +166,7 @@ export default Vue.extend({
     }
   },
   mounted () {
+    console.log(this.itemList);
   },
   methods: {
     itemBtnClick () {
@@ -222,6 +222,13 @@ export default Vue.extend({
         .catch(e => {
           console.error(e)
         })
+    },
+    async postKaimonoData () {
+      await kaimonomemoApi.postKaimonoData(this.itemList);
+    },
+    postData () {
+      this.postKaimonoData();
+      this.shareDialog2 = true;
     }
   },
 });
