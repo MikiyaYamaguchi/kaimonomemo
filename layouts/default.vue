@@ -33,8 +33,6 @@ body {
   position: relative;
   z-index: 0;
   overflow: hidden;
-  height: 100vh;
-  height: -webkit-fill-available;
   &:after,
   &:before {
     content: "";
