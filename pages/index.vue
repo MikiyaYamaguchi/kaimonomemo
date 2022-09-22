@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="content_top_area">
-      <i class="el-icon-share" @click="shareDialog = true"></i>
+      <!-- <i class="el-icon-share" @click="shareDialog = true"></i> -->
       <p class="item_count">
         {{ checkedItemCount }}/{{ ItemListArray.length }}
       </p>
@@ -77,7 +77,7 @@
         >
       </div>
     </el-dialog>
-    <el-dialog
+    <!-- <el-dialog
       title="買い物内容をシェアしますか？"
       class="share_dialog"
       :visible.sync="shareDialog"
@@ -110,7 +110,7 @@
           >
         </div>
       </el-dialog>
-    </el-dialog>
+    </el-dialog> -->
   </div>
 </template>
 
@@ -127,8 +127,8 @@ export default Vue.extend({
       dialogVisible: false,
       innerDialog: false,
       finishDialog: false,
-      shareDialog: false,
-      shareDialog2: false,
+      // shareDialog: false,
+      // shareDialog2: false,
       form_type: false,
       form_value: "",
       catSelectVal: null,
@@ -223,13 +223,13 @@ export default Vue.extend({
           console.error(e)
         })
     },
-    async postKaimonoData () {
-      await kaimonomemoApi.postKaimonoData(this.itemList);
-    },
-    postData () {
-      // this.postKaimonoData();
-      this.shareDialog2 = true;
-    }
+    // async postKaimonoData () {
+    //   await kaimonomemoApi.postKaimonoData(this.itemList);
+    // },
+    // postData () {
+    //   this.postKaimonoData();
+    //   this.shareDialog2 = true;
+    // }
   },
 });
 </script>
