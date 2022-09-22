@@ -9,6 +9,18 @@ body {
     sans-serif;
   height: 100vh;
   height: -webkit-fill-available;
+  #__nuxt {
+    height: 100vh;
+    height: -webkit-fill-available;
+    #__layout {
+      height: 100vh;
+      height: -webkit-fill-available;
+      > div {
+        height: 100vh;
+        height: -webkit-fill-available;
+      }
+    }
+  }
 }
 
 h1 {
