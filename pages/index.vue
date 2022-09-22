@@ -117,7 +117,7 @@
 <script>
 import Vue from "vue";
 import draggable from "vuedraggable";
-import kaimonomemoApi from "~/api/index";
+// import kaimonomemoApi from "~/api/index";
 
 export default Vue.extend({
   layout: "default",
@@ -227,7 +227,7 @@ export default Vue.extend({
       await kaimonomemoApi.postKaimonoData(this.itemList);
     },
     postData () {
-      this.postKaimonoData();
+      // this.postKaimonoData();
       this.shareDialog2 = true;
     }
   },
