@@ -419,6 +419,9 @@ export default Vue.extend({
   }
   ::v-deep(.el-dialog__body) {
     padding: 30px 20px 50px;
+    .el-input__inner {
+      font-size: 16px;
+    }
   }
   .add_btn {
     display: block;
