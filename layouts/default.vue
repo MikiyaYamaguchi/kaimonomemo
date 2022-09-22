@@ -124,7 +124,6 @@ header {
 }
 .el-container {
   height: 100vh;
-  height: -webkit-fill-available;
 }
 .el-main {
   padding: 0;
