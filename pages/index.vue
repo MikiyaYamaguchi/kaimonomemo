@@ -305,7 +305,7 @@ export default Vue.extend({
       }
     }
   }
-  ::v-deep .el-dialog__wrapper {
+  ::v-deep(.el-dialog__wrapper) {
     .el-dialog {
       margin-top: 20vh;
       height: 50%;
@@ -391,7 +391,7 @@ export default Vue.extend({
     }
   }
   @media screen and (max-width: 767px) {
-    ::v-deep .el-dialog {
+    ::v-deep(.el-dialog) {
       width: 90% !important;
       .btn {
         font-size: 16px;
@@ -414,10 +414,10 @@ export default Vue.extend({
     margin-bottom: 5px;
     font-weight: bold;
   }
-  ::v-deep .el-select {
+  ::v-deep(.el-select) {
     margin-top: 10px;
   }
-  ::v-deep .el-dialog__body {
+  ::v-deep(.el-dialog__body) {
     padding: 30px 20px 50px;
   }
   .add_btn {
@@ -443,7 +443,7 @@ export default Vue.extend({
     }
   }
   @media screen and (max-width: 767px) {
-    ::v-deep .el-dialog {
+    ::v-deep(.el-dialog) {
       width: 90%;
     }
     .inner_dialog_title {

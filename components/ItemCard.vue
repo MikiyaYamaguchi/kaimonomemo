@@ -139,15 +139,15 @@ export default Vue.extend({
       border: none;
       padding: 0;
       align-items: center;
-      ::v-deep .el-checkbox__input.is-checked {
+      ::v-deep(.el-checkbox__input.is-checked) {
         & + .el-checkbox__label {
           color: #606266;
         }
       }
-      ::v-deep .el-checkbox__input {
+      ::v-deep(.el-checkbox__input) {
         display: none;
       }
-      ::v-deep .el-checkbox__label {
+      ::v-deep(.el-checkbox__label) {
         position: relative;
         padding-left: 20px;
         font-weight: bold;
@@ -167,16 +167,16 @@ export default Vue.extend({
       }
     }
     @media screen and (min-width: 768px) {
-      ::v-deep .close {
+      ::v-deep(.close) {
         right: 1.5%;
       }
-      ::v-deep .edit {
+      ::v-deep(.edit) {
         right: 4%;
       }
     }
     @media screen and (max-width: 767px) {
       .el-checkbox {
-        ::v-deep .el-checkbox__label {
+        ::v-deep(.el-checkbox__label) {
           font-size: 18px;
           &:after {
             width: 10px;
@@ -195,10 +195,10 @@ export default Vue.extend({
 .el-checkbox {
   display: flex;
   align-content: center;
-  ::v-deep .el-checkbox__label {
+  ::v-deep(.el-checkbox__label) {
     font-size: 20px;
   }
-  ::v-deep .el-checkbox__input {
+  ::v-deep(.el-checkbox__input) {
     display: flex;
     align-items: center;
     &.is-checked {
@@ -215,7 +215,7 @@ export default Vue.extend({
     border-color: #ffa500;
   }
   @media screen and (max-width: 767px) {
-    ::v-deep .el-checkbox__label {
+    ::v-deep(.el-checkbox__label) {
       font-size: 17px;
     }
   }
