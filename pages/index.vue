@@ -329,6 +329,7 @@ export default Vue.extend({
         width: 90%;
         margin: 0 auto;
         transition: 0.2s;
+        font-weight: bold;
         cursor: pointer;
         &:first-child {
           margin-bottom: 5%;
@@ -394,7 +395,7 @@ export default Vue.extend({
     ::v-deep(.el-dialog) {
       width: 90% !important;
       .btn {
-        font-size: 16px;
+        font-size: 18px !important;
         img {
           width: 25px;
         }
