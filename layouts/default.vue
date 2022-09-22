@@ -33,6 +33,8 @@ body {
   position: relative;
   z-index: 0;
   overflow: hidden;
+  height: 100vh;
+  height: -webkit-fill-available;
   &:after,
   &:before {
     content: "";
@@ -129,8 +131,10 @@ header {
   padding: 0;
   overflow: inherit;
   max-height: calc(100vh - 122px - 122px);
+  height: -webkit-fill-available;
   @media screen and (max-width: 767px) {
     max-height: calc(100vh - 56px - 56px);
+    height: -webkit-fill-available;
   }
 }
 </style>
