@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <div class="content_top_area">
+      <i class="el-icon-delete" @click="deleteDialog = true"></i>
       <!-- <i class="el-icon-share" @click="shareDialog = true"></i> -->
       <p class="item_count">
         {{ checkedItemCount }}/{{ ItemListArray.length }}
@@ -81,6 +82,14 @@
         >
       </div>
     </el-dialog>
+    <el-dialog title="メモをリセットしますか？" :visible.sync="deleteDialog">
+      <div slot="footer" class="dialog-footer">
+        <el-button @click="finishDialog = false">戻る</el-button>
+        <el-button type="primary" @click="deleteData"
+          >メモをリセットする</el-button
+        >
+      </div>
+    </el-dialog>
     <!-- <el-dialog
       title="買い物内容をシェアしますか？"
       class="share_dialog"
@@ -131,6 +140,7 @@ export default Vue.extend({
       dialogVisible: false,
       innerDialog: false,
       finishDialog: false,
+      deleteDialog: false,
       // shareDialog: false,
       // shareDialog2: false,
       form_type: false,
@@ -295,7 +305,8 @@ export default Vue.extend({
       cursor: pointer;
       font-size: 25px;
     }
-    .el-icon-plus {
+    .el-icon-plus,
+    .el-icon-delete {
       cursor: pointer;
       font-size: 25px;
       color: #ffa500;
@@ -356,7 +367,8 @@ export default Vue.extend({
         }
       }
     }
-    &:last-child {
+    &:nth-child(4),
+    &:nth-child(5) {
       .el-dialog {
         flex-direction: column;
         .el-dialog__footer {
