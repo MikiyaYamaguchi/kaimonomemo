@@ -128,8 +128,7 @@ header {
 .el-main {
   padding: 0;
   overflow: inherit;
-  max-height: calc(100vh - 122px - 122px);
-  height: 100vh;
+  max-height: 100vh;
   height: -webkit-fill-available;
   @media screen and (max-width: 767px) {
     max-height: calc(100vh - 56px - 56px);
