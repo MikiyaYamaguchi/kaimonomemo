@@ -7,16 +7,16 @@ body {
   font-family: "Hiragino Sans W3", "Hiragino Kaku Gothic ProN",
     "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic",
     sans-serif;
-  height: 100vh;
-  height: -webkit-fill-available;
+  // height: 100vh;
+  // height: -webkit-fill-available;
   #__nuxt {
-    height: 100vh;
-    height: -webkit-fill-available;
+    // height: 100vh;
+    // height: -webkit-fill-available;
     #__layout {
-      height: 100vh;
-      height: -webkit-fill-available;
+      // height: 100vh;
+      // height: -webkit-fill-available;
       > div {
-        height: 100vh;
+        // height: 100vh;
         height: -webkit-fill-available;
       }
     }

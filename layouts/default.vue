@@ -123,7 +123,7 @@ header {
   height: auto !important;
 }
 .el-container {
-  height: 100vh;
+  height: 100%;
 }
 .el-main {
   padding: 0;
@@ -132,9 +132,8 @@ header {
   height: 100vh;
   height: -webkit-fill-available;
   @media screen and (max-width: 767px) {
-    max-height: calc(100vh - 56px - 56px);
-    height: 100vh;
-    height: -webkit-fill-available;
+    max-height: none;
+    height: 100%;
   }
 }
 </style>
