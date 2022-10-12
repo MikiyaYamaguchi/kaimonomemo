@@ -131,7 +131,7 @@ header {
   max-height: 100vh;
   height: -webkit-fill-available;
   @media screen and (max-width: 767px) {
-    max-height: 100%;
+    max-height: calc(100% - 56px - 56px);
     height: -webkit-fill-available;
   }
 }
