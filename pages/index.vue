@@ -227,6 +227,7 @@ export default Vue.extend({
     deleteData () {
       this.$store.commit("deleteData");
       this.finishDialog = false;
+      this.deleteDialog = false;
     },
     copyShareUrl (url) {
       navigator.clipboard.writeText(url)
