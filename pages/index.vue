@@ -254,8 +254,7 @@ export default Vue.extend({
   background: #fff;
   padding: 3% 5%;
   width: 85%;
-  height: -webkit-fill-available;
-  max-height: 100%;
+  height: 100%;
   margin: 0 auto;
   -moz-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
