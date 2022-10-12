@@ -13,7 +13,11 @@
       >
       <i class="el-icon-plus" @click="dialogVisible = true"></i>
     </div>
-    <draggable v-model="itemList" class="item-card_wrap">
+    <draggable
+      v-model="itemList"
+      class="item-card_wrap"
+      :options="{ delay: 200 }"
+    >
       <ItemCard
         v-for="item in itemList"
         :key="item.id"
@@ -389,6 +393,12 @@ export default Vue.extend({
       margin-right: 0;
       margin: 6px 0;
       z-index: 1;
+      &.item {
+        border-radius: 4px;
+      }
+      &.sortable-chosen {
+        background: #dcdcdc;
+      }
     }
   }
   @media screen and (max-width: 767px) {
