@@ -8,16 +8,15 @@ body {
     "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic",
     sans-serif;
   height: 100vh;
-  height: -webkit-fill-available;
   #__nuxt {
     height: 100vh;
-    height: -webkit-fill-available;
     #__layout {
       height: 100vh;
-      height: -webkit-fill-available;
       > div {
         height: 100vh;
-        height: -webkit-fill-available;
+        .el-container {
+          height: -webkit-fill-available;
+        }
       }
     }
   }
