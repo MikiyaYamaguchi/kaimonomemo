@@ -7,8 +7,8 @@ body {
   font-family: "Hiragino Sans W3", "Hiragino Kaku Gothic ProN",
     "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic",
     sans-serif;
-  height: 100vh;
-  height: -webkit-fill-available;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   #__nuxt {
     height: 100vh;
     height: -webkit-fill-available;
@@ -29,4 +29,10 @@ h1 {
 
 .el-input__inner {
   font-size: 16px;
+}
+
+@media screen and (max-width: 767px) {
+  html {
+    height: -webkit-fill-available;
+  }
 }
