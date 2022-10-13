@@ -10,14 +10,14 @@ body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
   #__nuxt {
-    // height: 100vh;
-    // height: -webkit-fill-available;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
     #__layout {
-      // height: 100vh;
-      // height: -webkit-fill-available;
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
       > div {
-        // height: 100vh;
-        // height: -webkit-fill-available;
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
       }
     }
   }
