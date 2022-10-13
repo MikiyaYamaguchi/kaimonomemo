@@ -123,8 +123,6 @@ header {
   height: auto !important;
 }
 .el-container {
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
   height: 100vh;
 }
 .el-main {
