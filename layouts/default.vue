@@ -26,6 +26,9 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
+html {
+  overflow: hidden;
+}
 body {
   position: relative;
   z-index: 0;
