@@ -29,7 +29,7 @@ export default Vue.extend({
 body {
   position: relative;
   z-index: 0;
-  overflow-y: scroll;
+  overflow: hidden;
   &:after,
   &:before {
     content: "";
