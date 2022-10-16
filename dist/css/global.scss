@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   margin: 0;
   font-family: "Hiragino Sans W3", "Hiragino Kaku Gothic ProN",
@@ -13,12 +17,15 @@ body {
   #__nuxt {
     height: 100vh;
     height: -webkit-fill-available;
+    overflow-y: scroll;
     #__layout {
       height: 100vh;
       height: -webkit-fill-available;
+      overflow-y: scroll;
       > div {
         height: 100vh;
         height: -webkit-fill-available;
+        overflow-y: scroll;
       }
     }
   }
