@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" v-bind:class="startMsgDisplay">
     <div class="content_top_area">
       <i class="el-icon-delete" @click="deleteDialog = true"></i>
       <!-- <i class="el-icon-share" @click="shareDialog = true"></i> -->
@@ -12,7 +12,7 @@
         @click="finishDialog = true"
         >買い物終わり！</el-button
       >
-      <i class="el-icon-plus" @click="dialogVisible = true"></i>
+      <i class="el-icon-plus" @click="clickPlusBtn"></i>
     </div>
     <draggable
       v-model="itemList"
@@ -146,7 +146,8 @@ export default Vue.extend({
       form_type: false,
       form_value: "",
       catSelectVal: null,
-      share_url_value: "http://www.test.com"
+      share_url_value: "http://www.test.com",
+      startMsgDisplay: "start_msg_on"
     };
   },
   computed: {
@@ -183,6 +184,9 @@ export default Vue.extend({
     console.log(this.itemList);
   },
   methods: {
+    clickPlusBtn () {
+      this.dialogVisible = true;
+    },
     itemBtnClick () {
       this.form_type = true;
       this.innerDialog = true;
@@ -215,6 +219,7 @@ export default Vue.extend({
       this.innerDialog = false;
       this.catSelectVal = null;
       this.$store.commit("finishBtnDisActive");
+      this.startMsgDisplay = "start_msg_off";
     },
     addCat () {
       this.setStrageCat(this.form_value);
@@ -223,6 +228,7 @@ export default Vue.extend({
       this.dialogVisible = false;
       this.innerDialog = false;
       this.$store.commit("finishBtnDisActive");
+      this.startMsgDisplay = "start_msg_off";
     },
     deleteData () {
       this.$store.commit("deleteData");
@@ -251,6 +257,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .container {
+  position: relative;
   background: #fff;
   padding: 3% 5%;
   width: 85%;
@@ -260,6 +267,39 @@ export default Vue.extend({
   -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
   -ms-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
+  &::before {
+    content: "";
+    background: url("../static/image/start_msg.png") no-repeat center/cover;
+    width: 300px;
+    height: 280.17px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    animation-name: startMsgAni;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    @media screen and (max-width: 767px) {
+      width: 200px;
+      height: 186.78px;
+      top: 20%;
+      bottom: auto;
+    }
+  }
+  &.start_msg_on {
+    &:before {
+      display: block;
+    }
+  }
+  &.start_msg_off {
+    &:before {
+      display: none;
+    }
+  }
   .content_top_area {
     margin-bottom: 4%;
     display: flex;
@@ -479,6 +519,19 @@ export default Vue.extend({
     .add_btn {
       font-size: 16px;
     }
+  }
+}
+@keyframes startMsgAni {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }
 </style>

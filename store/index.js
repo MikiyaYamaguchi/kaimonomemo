@@ -65,11 +65,13 @@ export const mutations = {
     state.itemList = itemList;
   },
   deleteItemList: (state, id) => {
-    if (state.itemList.find((e) => e.id === id).checked == true) {
-      state.checkedItemCount -= 1;
-    }
     let itemListArray = state.itemList.filter(function (item, index) {
-      if (item.type == "item") return item;
+      if (item.type == "item") {
+        if (state.itemList.find((e) => e.id === id).checked == true) {
+          state.checkedItemCount -= 1;
+        }
+      }
+      return item;
     });
     for (let i = 0; i < itemListArray.length; i++) {
       if (String(state.itemList[i].id).indexOf(id) !== -1) {

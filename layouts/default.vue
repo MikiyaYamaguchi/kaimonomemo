@@ -123,6 +123,7 @@ header {
   height: auto !important;
 }
 .el-container {
+  position: relative;
   height: 100vh;
 }
 .el-main {
