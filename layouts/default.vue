@@ -121,7 +121,6 @@ header {
 }
 .el-container {
   height: 100vh;
-  overflow-y: scroll;
 }
 .el-main {
   padding: 0;
