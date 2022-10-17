@@ -147,7 +147,7 @@ export default Vue.extend({
       form_value: "",
       catSelectVal: null,
       share_url_value: "http://www.test.com",
-      startMsgDisplay: "start_msg_on"
+      startMsgDisplay: "start_msg_off"
     };
   },
   computed: {
@@ -181,7 +181,12 @@ export default Vue.extend({
     }
   },
   mounted () {
-    console.log(this.itemList);
+    window.onload = () => {
+      console.log(this.itemList.length);
+      if (this.itemList.length === 0) {
+        this.startMsgDisplay = "start_msg_on";
+      }
+    }
   },
   methods: {
     clickPlusBtn () {
