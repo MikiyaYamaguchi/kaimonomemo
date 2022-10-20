@@ -64,6 +64,9 @@ export const mutations = {
   UpdateItemList: (state, itemList) => {
     state.itemList = itemList;
   },
+  UpdateCheckedCount: (state, count) => {
+    state.checkedItemCount = count;
+  },
   deleteItemList: (state, id) => {
     let itemListArray = state.itemList.filter(function (item, index) {
       if (item.type == "item") {

@@ -2,7 +2,7 @@
   <div class="container" v-bind:class="startMsgDisplay">
     <div class="content_top_area">
       <i class="el-icon-delete" @click="deleteDialog = true"></i>
-      <!-- <i class="el-icon-share" @click="shareDialog = true"></i> -->
+      <i class="el-icon-share" @click="shareDialog = true"></i>
       <p class="item_count">
         {{ checkedItemCount }}/{{ ItemListArray.length }}
       </p>
@@ -90,7 +90,7 @@
         >
       </div>
     </el-dialog>
-    <!-- <el-dialog
+    <el-dialog
       title="買い物内容をシェアしますか？"
       class="share_dialog"
       :visible.sync="shareDialog"
@@ -123,14 +123,14 @@
           >
         </div>
       </el-dialog>
-    </el-dialog> -->
+    </el-dialog>
   </div>
 </template>
 
 <script>
 import Vue from "vue";
 import draggable from "vuedraggable";
-// import kaimonomemoApi from "~/api/index";
+import kaimonomemoApi from "~/api/index";
 
 export default Vue.extend({
   layout: "default",
@@ -141,13 +141,16 @@ export default Vue.extend({
       innerDialog: false,
       finishDialog: false,
       deleteDialog: false,
-      // shareDialog: false,
-      // shareDialog2: false,
+      shareDialog: false,
+      shareDialog2: false,
       form_type: false,
       form_value: "",
       catSelectVal: null,
       share_url_value: "http://www.test.com",
-      startMsgDisplay: "start_msg_off"
+      startMsgDisplay: "start_msg_off",
+      kaimono_data: [],
+      id: "",
+      newDataCheckedCount: 0
     };
   },
   computed: {
@@ -162,6 +165,9 @@ export default Vue.extend({
     checkedItemCount: {
       get () {
         return this.$store.getters.getCheckedCount;
+      },
+      set (count) {
+        this.$store.commit('UpdateCheckedCount', count)
       }
     },
     finishBtnActive: {
@@ -182,9 +188,13 @@ export default Vue.extend({
   },
   mounted () {
     window.onload = () => {
-      console.log(this.itemList.length);
       if (this.itemList.length === 0) {
         this.startMsgDisplay = "start_msg_on";
+      }
+      let urlParam = location.search.substring(1);
+      if (urlParam) {
+        this.getKaimonoData();
+        this.startMsgDisplay = "start_msg_off";
       }
     }
   },
@@ -243,19 +253,46 @@ export default Vue.extend({
     copyShareUrl (url) {
       navigator.clipboard.writeText(url)
         .then(() => {
-          alert("コピーしました")
+          alert("コピーしました");
+          this.share_url_value = "";
+          this.shareDialog = false;
+          this.shareDialog2 = false;
         })
         .catch(e => {
           console.error(e)
         })
     },
-    // async postKaimonoData () {
-    //   await kaimonomemoApi.postKaimonoData(this.itemList);
-    // },
-    // postData () {
-    //   this.postKaimonoData();
-    //   this.shareDialog2 = true;
-    // }
+    async getKaimonoData () {
+      const res = await kaimonomemoApi.getKaimonoData(this.$route.query.id);
+      if (res.data.length != 0) {
+        this.itemList = res.data[0].kaimono_data;
+        res.data[0].kaimono_data.forEach(item => {
+          if (item.checked == true) {
+            this.newDataCheckedCount++;
+          }
+        });
+        this.checkedItemCount = this.newDataCheckedCount;
+        this.newDataCheckedCount = 0;
+      } else {
+        alert("メモ内容を取得できませんでした。");
+      }
+    },
+    async postKaimonoData () {
+      await kaimonomemoApi.postKaimonoData(this.itemList, this.id);
+    },
+    postData () {
+      const LENGTH = 20;
+      const SOURCE = "abcdefghijklmnopqrstuvwxyz0123456789";
+      let result = "";
+      for (let i = 0; i < LENGTH; i++) {
+        result += SOURCE[Math.floor(Math.random() * SOURCE.length)];
+      }
+      this.id = result;
+      this.share_url_value = `http://localhost:3000/?id=${result}`;
+      this.postKaimonoData(this.itemList, this.id);
+      this.id = "";
+      this.shareDialog2 = true;
+    }
   },
 });
 </script>
@@ -352,7 +389,8 @@ export default Vue.extend({
       font-size: 25px;
     }
     .el-icon-plus,
-    .el-icon-delete {
+    .el-icon-delete,
+    .el-icon-share {
       cursor: pointer;
       font-size: 25px;
       color: #ffa500;
@@ -414,7 +452,8 @@ export default Vue.extend({
       }
     }
     &:nth-child(4),
-    &:nth-child(5) {
+    &:nth-child(5),
+    &:nth-child(6) {
       .el-dialog {
         flex-direction: column;
         .el-dialog__footer {

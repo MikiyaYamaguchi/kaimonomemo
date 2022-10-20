@@ -1,14 +1,22 @@
 import axios from "axios";
 
 const myApi = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://kaimonomemo-api.herokuapp.com",
   responseType: "json"
 });
 
 export default {
-  async postKaimonoData(data: any) {
+  async getKaimonoData(id: string) {
     try {
-      await myApi.post("", data);
+      const response = await myApi.get(`/${id}`);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  },
+  async postKaimonoData(data: any, id: any) {
+    try {
+      await myApi.post(`/${id}`, data);
     } catch (error) {
       console.error(error);
     }
