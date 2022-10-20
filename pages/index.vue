@@ -267,7 +267,7 @@ export default Vue.extend({
       if (res.data.length != 0) {
         this.itemList = res.data[0].kaimono_data;
         res.data[0].kaimono_data.forEach(item => {
-          if (item.checked == true) {
+          if (item.type == "item" && item.checked == true) {
             this.newDataCheckedCount++;
           }
         });
