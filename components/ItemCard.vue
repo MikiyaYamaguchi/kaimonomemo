@@ -213,8 +213,8 @@ export default Vue.extend({
   }
   &.is-bordered {
     @media screen and (max-width: 767px) {
-      height: 32px;
-      padding: 5px 20px 5px 10px;
+      height: 34px;
+      padding: 6px 20px 6px 10px;
     }
   }
   &.is-bordered.is-checked {
@@ -222,7 +222,7 @@ export default Vue.extend({
   }
   @media screen and (max-width: 767px) {
     ::v-deep(.el-checkbox__label) {
-      font-size: 15px;
+      font-size: 16px;
     }
   }
 }
