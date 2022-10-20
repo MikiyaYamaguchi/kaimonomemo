@@ -288,7 +288,7 @@ export default Vue.extend({
         result += SOURCE[Math.floor(Math.random() * SOURCE.length)];
       }
       this.id = result;
-      this.share_url_value = `http://localhost:3000/?id=${result}`;
+      this.share_url_value = `https://kaimonomemo.netlify.app/?id=${result}`;
       this.postKaimonoData(this.itemList, this.id);
       this.id = "";
       this.shareDialog2 = true;
