@@ -78,7 +78,7 @@
     </el-dialog>
     <el-dialog title="お買い物お疲れ様でした！！" :visible.sync="finishDialog">
       <div slot="footer" class="dialog-footer">
-        <el-button @click="deleteDialog = false">戻る</el-button>
+        <el-button @click="finishDialog = false">戻る</el-button>
         <el-button type="primary" @click="deleteData"
           >メモをリセットする</el-button
         >
@@ -86,7 +86,7 @@
     </el-dialog>
     <el-dialog title="メモをリセットしますか？" :visible.sync="deleteDialog">
       <div slot="footer" class="dialog-footer">
-        <el-button @click="finishDialog = false">戻る</el-button>
+        <el-button @click="deleteDialog = false">戻る</el-button>
         <el-button type="primary" @click="deleteData"
           >メモをリセットする</el-button
         >
