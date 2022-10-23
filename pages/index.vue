@@ -124,6 +124,15 @@
         </div>
       </el-dialog>
     </el-dialog>
+    <el-dialog
+      title="共有された買い物データをメモに反映させますか？"
+      :visible.sync="applicationDialog"
+    >
+      <div slot="footer" class="dialog-footer">
+        <el-button @click="noApplication()">いいえ</el-button>
+        <el-button type="primary" @click="applicationActive()">はい</el-button>
+      </div>
+    </el-dialog>
   </div>
 </template>
 
@@ -144,6 +153,7 @@ export default Vue.extend({
       shareDialog: false,
       shareDialog2: false,
       form_type: false,
+      applicationDialog: false,
       form_value: "",
       catSelectVal: null,
       share_url_value: "http://www.test.com",
@@ -193,8 +203,7 @@ export default Vue.extend({
       }
       let urlParam = location.search.substring(1);
       if (urlParam) {
-        this.getKaimonoData();
-        this.startMsgDisplay = "start_msg_off";
+        this.applicationDialog = true;
       }
     }
   },
@@ -273,6 +282,7 @@ export default Vue.extend({
         });
         this.checkedItemCount = this.newDataCheckedCount;
         this.newDataCheckedCount = 0;
+        this.$store.commit('updateNum', this.itemList.length + 1);
       } else {
         alert("メモ内容を取得できませんでした。");
       }
@@ -292,6 +302,18 @@ export default Vue.extend({
       this.postKaimonoData(this.itemList, this.id);
       this.id = "";
       this.shareDialog2 = true;
+    },
+    noApplication () {
+      var url = new URL(window.location.href);
+      var params = url.searchParams;
+      params.delete('id');
+      history.replaceState('', '', url.pathname);
+      this.applicationDialog = false;
+    },
+    applicationActive () {
+      this.getKaimonoData();
+      this.applicationDialog = false;
+      this.startMsgDisplay = "start_msg_off";
     }
   },
 });
@@ -453,7 +475,8 @@ export default Vue.extend({
     }
     &:nth-child(4),
     &:nth-child(5),
-    &:nth-child(6) {
+    &:nth-child(6),
+    &:nth-child(7) {
       .el-dialog {
         flex-direction: column;
         .el-dialog__footer {

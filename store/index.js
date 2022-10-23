@@ -9,6 +9,9 @@ export const mutations = {
   addNum: (state) => {
     state.num += 1;
   },
+  updateNum: (state, num) => {
+    state.num = num;
+  },
   addItemList: (state, { itemList, selectCatNextId }) => {
     if (selectCatNextId != null) {
       state.itemList.splice(
