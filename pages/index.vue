@@ -2,7 +2,9 @@
   <div class="container" v-bind:class="startMsgDisplay">
     <div class="content_top_area">
       <i class="el-icon-delete" @click="deleteDialog = true"></i>
-      <i class="el-icon-share" @click="shareDialog = true"></i>
+      <figure class="share_icon" @click="shareDialog = true">
+        <img src="../static/image/share_icon.png" alt="Share" />
+      </figure>
       <p class="item_count">
         {{ checkedItemCount }}/{{ ItemListArray.length }}
       </p>
@@ -416,6 +418,16 @@ export default Vue.extend({
       cursor: pointer;
       font-size: 25px;
       color: #ffa500;
+    }
+    .share_icon {
+      width: 25px;
+      height: 25px;
+      margin: 0;
+      margin-left: 2%;
+      cursor: pointer;
+      img {
+        max-width: 25px;
+      }
     }
     @media screen and (max-width: 767px) {
       > *:not(:first-child) {
