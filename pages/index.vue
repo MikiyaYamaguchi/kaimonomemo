@@ -199,6 +199,7 @@ export default Vue.extend({
     }
   },
   mounted () {
+    this.deleteKaimonoData();
     window.onload = () => {
       if (this.itemList.length === 0) {
         this.startMsgDisplay = "start_msg_on";
@@ -291,6 +292,9 @@ export default Vue.extend({
     },
     async postKaimonoData () {
       await kaimonomemoApi.postKaimonoData(this.itemList, this.id);
+    },
+    async deleteKaimonoData () {
+      await kaimonomemoApi.deleteKaimonoData();
     },
     postData () {
       const LENGTH = 20;

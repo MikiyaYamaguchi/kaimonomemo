@@ -20,5 +20,12 @@ export default {
     } catch (error) {
       console.error(error);
     }
+  },
+  async deleteKaimonoData() {
+    try {
+      await myApi.delete('/data_delete/');
+    } catch (error) {
+      console.error(error);
+    }
   }
 };
