@@ -304,7 +304,7 @@ export default Vue.extend({
       font-weight: bold;
     }
   }
-  ::v-deep .el-dialog {
+  :v-deep(.el-dialog) {
     .el-dialog__header {
       text-align: center;
       .el-dialog__title {
@@ -355,7 +355,7 @@ export default Vue.extend({
     }
   }
   @media screen and (max-width: 767px) {
-    ::v-deep .el-dialog {
+    :v-deep(.el-dialog) {
       width: 90%;
     }
     .how_to_icon_wrap {
