@@ -304,8 +304,8 @@ export default Vue.extend({
       font-weight: bold;
     }
   }
-  :v-deep(.el-dialog) {
-    .el-dialog__header {
+  ::v-deep(.el-dialog) {
+    ::v-deep(.el-dialog__header) {
       text-align: center;
       .el-dialog__title {
         position: relative;
