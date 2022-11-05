@@ -3,6 +3,7 @@
     <h1 class="title">
       <img src="../static/image/logo.png" alt="買い物メモ" />
     </h1>
+    <HowTo />
   </div>
 </template>
 
@@ -20,6 +21,11 @@ export default Vue.extend({
   img {
     max-width: 376px;
   }
+}
+.hdr_container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 @media screen and (max-width: 767px) {
   .title {

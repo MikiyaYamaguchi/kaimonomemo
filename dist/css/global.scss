@@ -32,6 +32,23 @@ h1 {
   font-size: 16px;
 }
 
+.pc-only,
+.sp-only {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .pc-only {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sp-only {
+    display: block !important;
+  }
+}
+
 // @media screen and (max-width: 767px) {
 //   html {
 //     height: -webkit-fill-available;
