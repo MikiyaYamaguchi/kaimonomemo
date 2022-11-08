@@ -538,12 +538,14 @@ export default Vue.extend({
     }
   }
   @media screen and (max-width: 767px) {
-    ::v-deep(.el-dialog) {
-      width: 90% !important;
-      .btn {
-        font-size: 18px !important;
-        img {
-          width: 25px;
+    ::v-deep(.el-dialog__wrapper) {
+      .el-dialog {
+        width: 90% !important;
+        .btn {
+          font-size: 18px !important;
+          img {
+            width: 25px;
+          }
         }
       }
     }
