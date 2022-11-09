@@ -146,6 +146,10 @@ import kaimonomemoApi from "~/api/index";
 export default Vue.extend({
   layout: "default",
   components: { draggable },
+  head: {
+    titleTemplate: null,
+    title: '買い物メモ'
+  },
   data () {
     return {
       dialogVisible: false,
