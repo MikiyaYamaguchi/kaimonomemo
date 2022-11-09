@@ -18,6 +18,12 @@ export default {
         content:
           "便利な買い物メモアプリケーションです。買うものをメモしておくことができて、家族や友達にメモ内容をURLで共有可能！買い物リストをカテゴリー分けもできます。",
       },
+      {
+        hid: "keywords",
+        name: "keywords",
+        content:
+          "買い物,買い物メモ,メモ,お買い物,商品,ショッピング,便利ツール,買い物アプリ",
+      },
       { name: "format-detection", content: "telephone=no" },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
