@@ -45,10 +45,10 @@ export default {
       return encodeURIComponent(`${this.text} ${this.url}`);
     },
     twitterURL () {
-      return `https://twitter.com/intent/tweet?url=http://localhost:3000/${this.$route.path}&text=${this.text}`;
+      return `https://twitter.com/intent/tweet?url=https://kaimononosuke.netlify.app/${this.$route.path}&text=${this.text}`;
     },
     facebookURL () {
-      return `https://www.facebook.com/sharer/sharer.php?u=http://localhost:3000/${this.$route.path}`;
+      return `https://www.facebook.com/sharer/sharer.php?u=https://kaimononosuke.netlify.app/${this.$route.path}`;
     },
     lineURL () {
       return `https://line.me/R/msg/text/?${this.content}`;

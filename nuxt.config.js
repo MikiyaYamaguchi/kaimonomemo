@@ -81,7 +81,7 @@ export default {
   ],
 
   sitemap: {
-    hostname: process.env.BASE_URL || "http://localhost:3000/",
+    hostname: process.env.BASE_URL || "https://kaimononosuke.netlify.app/",
     routes: async () => {
       const { $content } = require("@nuxt/content");
 
