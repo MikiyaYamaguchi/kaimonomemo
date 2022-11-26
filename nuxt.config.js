@@ -64,6 +64,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     "@nuxt/typescript-build",
+    "@aceforth/nuxt-optimized-images",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -99,6 +100,10 @@ export default {
         component: resolve(__dirname, "pages/404/"),
       });
     },
+  },
+
+  optimizedImages: {
+    optimizeImages: true,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

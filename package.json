@@ -34,8 +34,10 @@
     "webpack": "^4.46.0"
   },
   "devDependencies": {
+    "@aceforth/nuxt-optimized-images": "^1.4.0",
     "@nuxt/types": "^2.9",
     "@nuxt/typescript-build": "^2.1.0",
-    "@nuxtjs/google-adsense": "2.0.0"
+    "@nuxtjs/google-adsense": "2.0.0",
+    "imagemin-pngquant": "^9.0.2"
   }
 }
