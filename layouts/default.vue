@@ -1,11 +1,13 @@
 <template>
-  <div>
+  <div id="page-top">
     <el-container>
       <el-header>
         <Header />
       </el-header>
       <el-main>
-        <Nuxt />
+        <div class="container">
+          <Nuxt />
+        </div>
       </el-main>
       <el-footer>
         <Footer />
@@ -26,80 +28,88 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
-html {
-  overflow: hidden;
-}
 body {
   position: relative;
   z-index: 0;
-  overflow: hidden;
-  &:after,
-  &:before {
-    content: "";
-    width: 1500px;
-    height: 500px;
-    position: absolute;
-    margin: auto;
-    background: #ffd700;
-    z-index: -2;
-  }
-  &:after {
-    top: -350px;
-    transform: rotate(20deg);
-    right: -350px;
-  }
-  &:before {
-    bottom: -350px;
-    left: -350px;
-    transform: rotate(30deg);
-  }
   > #__nuxt {
     position: relative;
-    &:after {
+    height: 100%;
+    overflow: hidden;
+    &:after,
+    &:before {
       content: "";
       width: 1500px;
       height: 500px;
-      background: #ffa500;
-      position: absolute;
-      bottom: -200px;
-      right: -550px;
+      position: fixed;
       margin: auto;
-      z-index: -1;
-      transform: rotate(-55deg);
+      background: #ffd700;
+      z-index: -2;
+    }
+    &:after {
+      top: -350px;
+      transform: rotate(20deg);
+      right: -350px;
+    }
+    &:before {
+      bottom: -350px;
+      left: -350px;
+      transform: rotate(30deg);
+    }
+    > #__layout {
+      position: relative;
+      height: 100%;
+      &:after {
+        content: "";
+        width: 1500px;
+        height: 500px;
+        background: #ffa500;
+        position: fixed;
+        bottom: -200px;
+        right: -550px;
+        margin: auto;
+        z-index: -1;
+        transform: rotate(-55deg);
+      }
     }
   }
   @media screen and (max-width: 1510px) {
-    &:after {
-      top: -300px;
-      right: -600px;
-    }
-    &:before {
-      bottom: -200px;
-      left: -600px;
+    > #__nuxt {
+      &:after {
+        top: -300px;
+        right: -600px;
+      }
+      &:before {
+        bottom: -200px;
+        left: -600px;
+      }
     }
   }
   @media screen and (max-width: 1200px) {
-    &:after {
-      top: -300px;
-      right: -900px;
-    }
-    &:before {
-      bottom: -250px;
-      left: -900px;
+    > #__nuxt {
+      &:after {
+        top: -300px;
+        right: -900px;
+      }
+      &:before {
+        bottom: -250px;
+        left: -900px;
+      }
     }
   }
   @media screen and (max-width: 767px) {
-    &:after {
-      right: -850px;
-      transform: rotate(65deg);
-    }
-    &:before {
-      left: -850px;
-      transform: rotate(65deg);
-    }
-    > div {
+    > #__nuxt {
       &:after {
-        bottom: -700px;
+        right: -850px;
+        transform: rotate(65deg);
+      }
+      &:before {
+        left: -850px;
+        transform: rotate(65deg);
+      }
+      > div {
+        &:after {
+          bottom: -700px;
+        }
       }
     }
   }
@@ -111,31 +121,42 @@ header {
 .el-footer {
   height: auto !important;
   min-height: 122px;
+  padding-bottom: 10px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  padding-bottom: 10px;
   @media screen and (max-width: 767px) {
     min-height: 56px;
   }
 }
 .el-header {
   height: auto !important;
+  position: relative;
 }
 .el-container {
   position: relative;
-  height: 100vh;
+  height: 100%;
 }
 .el-main {
   padding: 0;
   overflow: inherit;
-  max-height: calc(100vh - 122px - 122px);
-  height: 100vh;
-  height: -webkit-fill-available;
+  > .container {
+    position: relative;
+    background: #fff;
+    padding: 5%;
+    width: 95%;
+    margin: 0 auto;
+    -ms-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 2px 2px rgb(0 0 0 / 10%);
+    min-height: calc(100vh - 122px - 125px);
+    @media screen and (max-width: 767px) {
+      min-height: calc(100vh - 59px - 56px);
+    }
+  }
   @media screen and (max-width: 767px) {
-    max-height: calc(100% - 56px - 56px);
-    height: 100%;
-    // height: -webkit-fill-available;
+    > .container {
+      padding: 8% 5%;
+    }
   }
 }
 </style>

@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "買い物メモ | 便利な買い物Webアプリ",
+    title: "かいものの助 | 買い物に関する便利な情報やアプリを共有するサイト",
     htmlAttrs: {
       lang: "en",
     },
@@ -68,6 +68,9 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    "@nuxt/content",
+    "@nuxtjs/dayjs",
+    "@nuxtjs/sitemap",
     [
       "@nuxtjs/google-adsense",
       {
@@ -75,11 +78,27 @@ export default {
         pageLevelAds: true,
       },
     ],
-    "@nuxtjs/sitemap",
   ],
 
   sitemap: {
-    hostname: "https://kaimonomemo.netlify.app",
+    hostname: process.env.BASE_URL || "http://localhost:3000/",
+    routes: async () => {
+      const { $content } = require("@nuxt/content");
+
+      const posts = await $content("article").only(["path"]).fetch();
+
+      return posts.map((p) => p.path);
+    },
+  },
+
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push({
+        name: "custom",
+        path: "*",
+        component: resolve(__dirname, "pages/404/"),
+      });
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

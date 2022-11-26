@@ -7,25 +7,52 @@ body {
   font-family: "Hiragino Sans W3", "Hiragino Kaku Gothic ProN",
     "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic",
     sans-serif;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+  font-size: 15px;
   #__nuxt {
-    height: 100vh;
-    height: -webkit-fill-available;
+    height: 100%;
+    overflow: hidden;
     #__layout {
-      height: 100vh;
-      height: -webkit-fill-available;
+      height: 100%;
       > div {
-        height: 100vh;
-        height: -webkit-fill-available;
+        height: 100%;
         overflow-y: scroll;
       }
     }
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
   }
 }
 
 h1 {
   margin: 0;
+  margin-bottom: 1em;
+  letter-spacing: 1.6px;
+  font-size: 28px;
+  @media screen and (max-width: 767px) {
+    font-size: 20px;
+  }
+}
+
+p {
+  line-height: 2;
+  margin: 0.5em 0 1em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .el-input__inner {
@@ -46,6 +73,296 @@ h1 {
 @media screen and (max-width: 767px) {
   .sp-only {
     display: block !important;
+  }
+}
+
+.el-main {
+  > .container {
+    > .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+  }
+}
+
+section {
+  margin-bottom: 5%;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 7%;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h2 {
+  margin: 0;
+  font-size: 22px;
+  margin-bottom: 1em;
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid #ffa500;
+  @media screen and (max-width: 767px) {
+    font-size: 18px;
+  }
+}
+
+h3 {
+  position: relative;
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 15px;
+  margin-bottom: 1em;
+  &:after {
+    content: "";
+    width: 3px;
+    height: 70%;
+    background: #ffa500;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 16px;
+    &:after {
+      width: 2px;
+    }
+  }
+}
+
+h4 {
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+  padding-left: 20px;
+  margin-bottom: 0.8em;
+  &:after {
+    content: "";
+    width: 8px;
+    height: 3px;
+    background: #ffa500;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+    padding-left: 15px;
+    &:after {
+      height: 2px;
+      width: 6px;
+    }
+  }
+}
+
+.article_wrap {
+  .nuxt-content {
+    h2 {
+      margin-top: 5%;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    h3 {
+      margin-top: 3%;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    h4 {
+      margin-top: 2%;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .nuxt-content {
+      h2 {
+        margin-top: 10%;
+      }
+      h3 {
+        margin-top: 6%;
+      }
+      h4 {
+        margin-top: 4%;
+      }
+    }
+  }
+}
+
+.article_wrap {
+  ul {
+    padding: 2% 2% 2% 4%;
+    margin: 0 0.5em;
+    background: rgb(243, 240, 240);
+    -moz-box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 2px 2px 5px 3px rgb(0 0 0 / 10%);
+    -ms-box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 5px 3px rgb(0 0 0 / 10%);
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+    li {
+      line-height: 1.8;
+      letter-spacing: 2px;
+      padding: 0.2em 0;
+    }
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto;
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+    tr {
+      th,
+      td {
+        padding: 0.5em 0.7em;
+        border: 1px solid #cccccc;
+      }
+      th {
+        background: #ffa500;
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+  }
+  img {
+    max-width: 100%;
+  }
+  figure {
+    margin: 0;
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    ul {
+      padding: 4% 4% 4% 8%;
+    }
+  }
+}
+
+a {
+  color: #222;
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.date_txt {
+  text-align: right;
+  font-size: 13px;
+}
+
+.category {
+  a {
+    font-size: 16px;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    a {
+      font-size: 14px;
+    }
+  }
+}
+
+.tag {
+  margin-bottom: 3%;
+  a {
+    display: inline-block;
+    margin-right: 15px;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:before {
+      content: "#";
+    }
+  }
+}
+
+.article_wrap {
+  .nuxt-content-container {
+    margin-bottom: 5%;
+  }
+}
+
+.toc {
+  margin-bottom: 5%;
+  ul {
+    padding: 2% 3%;
+    li {
+      list-style: none;
+      a {
+        &.h2_link {
+          font-weight: bold;
+        }
+        &.h3_link {
+          font-size: 14px;
+          margin-left: 1em;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    margin-bottom: 10%;
+    ul {
+      padding: 4%;
+    }
+  }
+}
+
+.page-nav {
+  padding: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3% !important;
+  li {
+    list-style: none;
+    a {
+      position: relative;
+      &:before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-top: 1px solid #222;
+        border-right: 1px solid #222;
+        position: absolute;
+        top: 50%;
+        margin: auto;
+      }
+    }
+    &:first-child {
+      a {
+        padding-left: 15px;
+        &:before {
+          left: 0;
+          transform: translateY(-50%) rotate(-135deg);
+        }
+      }
+    }
+    &:last-child {
+      a {
+        padding-right: 10px;
+        &:before {
+          right: 0;
+          transform: translateY(-50%) rotate(45deg);
+        }
+      }
+    }
   }
 }
 

@@ -1,8 +1,13 @@
+// import taxonomy from "../taxonomy";
+
 export const state = () => ({
   itemList: [],
   num: 0,
   checkedItemCount: 0,
   finishBtnActive: true,
+  // category: [...taxonomy.category],
+  // tags: [...taxonomy.tags],
+  // apps: [...taxonomy.apps],
 });
 
 export const mutations = {
@@ -130,4 +135,34 @@ export const getters = {
       return state.itemList.find((e) => e.id === id).checked;
     };
   },
+  getTagTextBySlug: (state) => {
+    return (slug) => {
+      const idx = state.tags.findIndex((tag) => {
+        return tag.slug === slug;
+      });
+      return idx > -1 ? state.tags[idx].text : undefined;
+    };
+  },
+  getCategoryTextBySlug: (state) => {
+    return (slug) => {
+      const idx = state.category.findIndex((tag) => {
+        return tag.slug === slug;
+      });
+      return idx > -1 ? state.category[idx].text : undefined;
+    };
+  },
+  // getTagName: (state) => {
+  //   return (tag) => {
+  //     const tagArray = [];
+  //     tag.forEach((item) => {
+  //       tagArray.push(state.tags.find((v) => v.slug === item).text);
+  //     });
+  //     return tagArray;
+  //   };
+  // },
+  // getCatName: (state) => {
+  //   return (cat) => {
+  //     return state.category.find((v) => v.slug === cat).text;
+  //   };
+  // },
 };
