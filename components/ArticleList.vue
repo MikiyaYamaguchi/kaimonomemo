@@ -73,8 +73,8 @@ export default Vue.extend({
       padding: 6% 6% 6% calc(8px + 6%);
       height: 100%;
       .title_txt {
-        font-size: 17px;
-        font-weight: bold;
+        font-size: 16px;
+        font-weight: 700;
         margin: 0;
       }
       .date_txt {

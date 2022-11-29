@@ -162,6 +162,10 @@ export default Vue.extend({
               font-size: 18px;
               font-weight: bold;
               margin: 0 0 0.4em 0;
+              @media screen and (max-width: 767px) {
+                font-size: 16px;
+                font-weight: 700;
+              }
             }
           }
           .img_content {
@@ -236,7 +240,7 @@ export default Vue.extend({
 @media screen and (max-width: 767px) {
   .top-container {
     h2 {
-      font-size: 22px;
+      font-size: 20px !important;
       padding-bottom: 0;
       border: none;
     }
@@ -284,6 +288,9 @@ export default Vue.extend({
                 object-fit: cover;
                 width: 100%;
                 height: 100%;
+              }
+              + p {
+                font-weight: normal;
               }
             }
           }
