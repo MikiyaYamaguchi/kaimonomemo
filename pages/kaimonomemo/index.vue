@@ -107,11 +107,7 @@
         class="inner_dialog"
         append-to-body
       >
-        <el-input
-          placeholder="カレーライス、調味料 etc..."
-          v-model="share_url_value"
-          readonly
-        ></el-input>
+        <el-input v-model="share_url_value" readonly></el-input>
         <div slot="footer" class="dialog-footer">
           <el-button
             type="primary"
@@ -328,7 +324,7 @@ export default Vue.extend({
         result += SOURCE[Math.floor(Math.random() * SOURCE.length)];
       }
       this.id = result;
-      this.share_url_value = `https://kaimonomemo.netlify.app/?id=${result}`;
+      this.share_url_value = `https://kaimononosuke.netlify.app/kaimonomemo/?id=${result}`;
       this.postKaimonoData(this.itemList, this.id);
       this.id = "";
       this.shareDialog2 = true;
