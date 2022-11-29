@@ -26,7 +26,6 @@
               to="#"
               v-scroll-to="{
                 el: `#${toc.id}`,
-                onStart: hideModal,
               }"
               class="h2_link"
               >{{ toc.text }}</nuxt-link
@@ -36,7 +35,6 @@
               to="#"
               v-scroll-to="{
                 el: `#${toc.id}`,
-                onStart: hideModal,
               }"
               class="h3_link"
               >{{ toc.text }}</nuxt-link

@@ -98,6 +98,7 @@ export default {
 @media screen and (max-width: 767px) {
   .sns_wrap {
     display: block;
+    margin-top: 10%;
   }
   .title_txt {
     font-size: 14px;
