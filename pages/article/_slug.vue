@@ -21,14 +21,25 @@
       <div class="toc">
         <ul>
           <li v-for="toc in article.toc" :key="toc.id">
-            <a v-if="toc.depth == 2" :href="`#${toc.id}`" class="h2_link">{{
-              toc.text
-            }}</a>
-            <a
+            <nuxt-link
+              v-if="toc.depth == 2"
+              to="#"
+              v-scroll-to="{
+                el: `#${toc.id}`,
+                onStart: hideModal,
+              }"
+              class="h2_link"
+              >{{ toc.text }}</nuxt-link
+            >
+            <nuxt-link
               v-else-if="toc.depth == 3"
-              :href="`#${toc.id}`"
+              to="#"
+              v-scroll-to="{
+                el: `#${toc.id}`,
+                onStart: hideModal,
+              }"
               class="h3_link"
-              >{{ toc.text }}</a
+              >{{ toc.text }}</nuxt-link
             >
           </li>
         </ul>
