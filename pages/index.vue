@@ -93,6 +93,7 @@ export default Vue.extend({
     font-size: 28px;
     padding-bottom: 0;
     border: none;
+    margin-bottom: 0.6em;
     .el-icon-mobile-phone,
     .el-icon-document,
     .el-icon-folder,
@@ -208,6 +209,10 @@ export default Vue.extend({
         border-left: 8px solid #ffa500;
         text-decoration: none;
         padding: 6% 6% 6% calc(8px + 6%);
+        @media screen and (max-width: 767px) {
+          font-size: 16px;
+          font-weight: 600;
+        }
       }
       &:nth-child(3n + 1) {
         margin-left: 0;
