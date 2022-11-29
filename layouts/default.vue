@@ -132,6 +132,7 @@ header {
 .el-header {
   height: auto !important;
   position: relative;
+  z-index: 999;
 }
 .el-container {
   position: relative;
@@ -149,6 +150,7 @@ header {
     -ms-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 0px 2px 2px rgb(0 0 0 / 10%);
     min-height: calc(100vh - 122px - 125px);
+    z-index: 998;
     @media screen and (max-width: 767px) {
       min-height: calc(100vh - 59px - 56px);
     }
