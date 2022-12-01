@@ -1,9 +1,16 @@
 module.exports = {
-  category: [{ text: "便利ツール", slug: "tool" }],
+  category: [
+    { text: "便利ツール", slug: "tool" },
+    { text: "レシピ", slug: "recipe" },
+  ],
   tags: [
     { text: "Webアプリ", slug: "web-app" },
     { text: "自作アプリ", slug: "self-made-app" },
     { text: "買い物リスト", slug: "kaimono-list" },
+    { text: "節約", slug: "saving" },
+    { text: "献立", slug: "menu" },
+    { text: "安い", slug: "cheap" },
+    { text: "美味しい", slug: "delicious" },
   ],
   apps: [
     {
