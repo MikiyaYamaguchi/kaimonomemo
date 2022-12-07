@@ -11,6 +11,8 @@ module.exports = {
     { text: "献立", slug: "menu" },
     { text: "安い", slug: "cheap" },
     { text: "美味しい", slug: "delicious" },
+    { text: "コスパ", slug: "cospa" },
+    { text: "食材", slug: "foodstuff" },
   ],
   apps: [
     {
