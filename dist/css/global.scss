@@ -432,3 +432,14 @@ a {
 //     height: -webkit-fill-available;
 //   }
 // }
+
+.text-large {
+  font-size: 20px;
+  @media screen and (max-width: 767px) {
+    font-size: 17px;
+  }
+}
+
+.text-red {
+  color: #f00;
+}
