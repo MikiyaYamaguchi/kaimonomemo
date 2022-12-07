@@ -37,6 +37,7 @@ h1 {
 p {
   line-height: 2;
   margin: 0.5em 0 1em;
+  word-break: break-all;
 }
 
 p:last-child {
@@ -332,8 +333,14 @@ a {
   margin-top: 3% !important;
   li {
     list-style: none;
+    font-size: 12px;
     a {
       position: relative;
+      width: 350px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
       &:before {
         content: "";
         width: 7px;
@@ -349,7 +356,7 @@ a {
       a {
         padding-left: 15px;
         &:before {
-          left: 0;
+          left: 2px;
           transform: translateY(-50%) rotate(-135deg);
         }
       }
@@ -357,10 +364,19 @@ a {
     &:last-child {
       a {
         padding-right: 10px;
+        margin-left: auto;
+        margin-right: 0;
         &:before {
-          right: 0;
+          right: 2px;
           transform: translateY(-50%) rotate(45deg);
         }
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    li {
+      a {
+        width: 130px;
       }
     }
   }
@@ -425,6 +441,7 @@ a {
 .caution a {
   font-size: 11px;
   color: #808080 !important;
+  word-break: break-all;
 }
 
 // @media screen and (max-width: 767px) {

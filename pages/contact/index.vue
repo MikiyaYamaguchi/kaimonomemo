@@ -104,6 +104,7 @@ export default Vue.extend({
     font-weight: 700;
     transition: 0.2s;
     font-size: 14px;
+    color: #222;
     cursor: pointer;
     &:hover {
       transform: translateY(4px);

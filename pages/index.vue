@@ -149,8 +149,12 @@ export default Vue.extend({
         -ms-box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.1);
         box-shadow: 1px 1px 4px 2px rgb(0 0 0 / 10%);
         border-left: 8px solid #ffa500;
+        transition: 0.2s;
         text-decoration: none;
         padding: 5% 5% 5% calc(8px + 5%);
+        &:hover {
+          border-color: #ffd700;
+        }
         .card_wrap {
           display: flex;
           .txt_content,
@@ -207,8 +211,12 @@ export default Vue.extend({
         -ms-box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.1);
         box-shadow: 1px 1px 4px 2px rgb(0 0 0 / 10%);
         border-left: 8px solid #ffa500;
+        transition: 0.2s;
         text-decoration: none;
         padding: 6% 6% 6% calc(8px + 6%);
+        &:hover {
+          border-color: #ffd700;
+        }
         @media screen and (max-width: 767px) {
           font-size: 16px;
           font-weight: 600;

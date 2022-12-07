@@ -64,8 +64,18 @@ export default Vue.extend({
     -ms-box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.1);
     box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.1);
     border-left: 8px solid #ffa500;
+    transition: 0.2s;
+    margin-top: 2.5%;
     &:nth-child(3n + 1) {
       margin-left: 0;
+    }
+    &:first-child,
+    &:nth-child(2),
+    &:nth-child(3) {
+      margin-top: 0;
+    }
+    &:hover {
+      border-color: #ffd700;
     }
     a {
       text-decoration: none;
@@ -104,6 +114,7 @@ export default Vue.extend({
     .article_card {
       width: 100%;
       margin-left: 0;
+      margin-top: 0 !important;
       &:not(:last-child) {
         margin-bottom: 4%;
       }

@@ -2,6 +2,7 @@ module.exports = {
   category: [
     { text: "便利ツール", slug: "tool" },
     { text: "節約", slug: "saving" },
+    { text: "コラム", slug: "column" },
   ],
   tags: [
     { text: "Webアプリ", slug: "web-app" },
@@ -13,6 +14,10 @@ module.exports = {
     { text: "美味しい", slug: "delicious" },
     { text: "コスパ", slug: "cospa" },
     { text: "食材", slug: "foodstuff" },
+    { text: "食品", slug: "food" },
+    { text: "非常食", slug: "emergency-food" },
+    { text: "賞味期限", slug: "freshness-date" },
+    { text: "防災", slug: "disaster-prevention" },
   ],
   apps: [
     {
