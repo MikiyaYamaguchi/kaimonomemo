@@ -86,6 +86,7 @@ export default Vue.extend({
         font-size: 16px;
         font-weight: 700;
         margin: 0;
+        line-height: 1.6;
       }
       .date_txt {
         text-align: left;
@@ -97,6 +98,7 @@ export default Vue.extend({
         margin-bottom: 0;
       }
       .tag {
+        line-height: 1.3;
         span {
           display: inline-block;
           position: relative;

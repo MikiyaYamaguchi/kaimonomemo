@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "かいものの助 | 買い物に関する便利な情報やアプリを共有するサイト",
+    title: "かいものの助 | 買い物に関する便利な情報やアプリをお届けするサイト",
     htmlAttrs: {
       lang: "en",
     },
@@ -16,13 +16,13 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "便利な買い物メモアプリケーションです。買うものをメモしておくことができて、家族や友達にメモ内容をURLで共有可能！買い物リストをカテゴリー分けもできます。",
+          "買い物に関する便利な情報や便利な自作アプリをお届けするサイトです。日常に欠かせない「買い物」に関する情報や、Webエンジニアとしての技術をたくさんの人に共有したいという思いでサイトを立ち上げました。このサイトが「買い物」の分野において、皆さんの役に立つことを願っています。",
       },
       {
         hid: "keywords",
         name: "keywords",
         content:
-          "買い物,買い物メモ,メモ,お買い物,商品,ショッピング,便利ツール,買い物アプリ",
+          "買い物,ショッピング,情報,ブログ,Webアプリ,便利アプリ,お役立ち情報",
       },
       { hid: "og:site_name", property: "og:site_name", content: "買い物メモ" },
       { hid: "og:type", property: "og:type", content: "website" },
@@ -36,7 +36,7 @@ export default {
         hid: "og:description",
         property: "og:description",
         content:
-          "便利な買い物メモアプリケーションです。買うものをメモしておくことができて、家族や友達にメモ内容をURLで共有可能！買い物リストをカテゴリー分けもできます。",
+          "買い物に関する便利な情報や便利な自作アプリをお届けするサイトです。日常に欠かせない「買い物」に関する情報や、Webエンジニアとしての技術をたくさんの人に共有したいという思いでサイトを立ち上げました。このサイトが「買い物」の分野において、皆さんの役に立つことを願っています。",
       },
       {
         hid: "og:image",

@@ -18,6 +18,12 @@ module.exports = {
     { text: "非常食", slug: "emergency-food" },
     { text: "賞味期限", slug: "freshness-date" },
     { text: "防災", slug: "disaster-prevention" },
+    { text: "スーパーマーケット", slug: "supermarket" },
+    { text: "支払い", slug: "payment" },
+    { text: "ポイント", slug: "pont" },
+    { text: "クレジットカード", slug: "credit-card" },
+    { text: "電子マネー", slug: "e-money" },
+    { text: "QRコード決済", slug: "qr-code-clearing" },
   ],
   apps: [
     {

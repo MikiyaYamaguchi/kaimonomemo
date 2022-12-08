@@ -234,6 +234,26 @@ h4 {
       }
     }
   }
+  .equivalent_table {
+    &.col2 {
+      table {
+        tr {
+          th {
+            width: 50%;
+          }
+        }
+      }
+    }
+    &.col3 {
+      table {
+        tr {
+          th {
+            width: 33.333%;
+          }
+        }
+      }
+    }
+  }
   img {
     max-width: 100%;
   }
@@ -244,6 +264,14 @@ h4 {
     }
   }
   @media screen and (max-width: 767px) {
+    table {
+      tr {
+        th,
+        td {
+          padding: 0.2em 0.3em;
+        }
+      }
+    }
     ul {
       padding: 4% 4% 4% 8%;
     }
@@ -455,6 +483,10 @@ a {
   @media screen and (max-width: 767px) {
     font-size: 17px;
   }
+}
+
+.text-small {
+  font-size: 12px;
 }
 
 .text-red {
