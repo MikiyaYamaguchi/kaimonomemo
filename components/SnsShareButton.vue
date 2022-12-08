@@ -61,7 +61,7 @@ export default {
 .sns_wrap {
   display: flex;
   align-items: center;
-  margin-bottom: 4%;
+  margin: 3% 0;
   .title_txt {
     margin: 0 15px 0 0;
   }
