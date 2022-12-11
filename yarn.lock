@@ -8241,6 +8241,11 @@ prepend-http@^2.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
   integrity sha512-ravE6m9Atw9Z/jjttRUZ+clIXogdghyZAuWJ3qEzjT+jI/dL1ifAqhZeC5VHzQp1MSt1+jxKkFNemj/iO7tVUA==
 
+prettier-plugin-md-nocjsp@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-md-nocjsp/-/prettier-plugin-md-nocjsp-1.5.0.tgz#8f2b4b0751a36e44c0b906db0a12cb5825f0ca10"
+  integrity sha512-rrGFV1cOSz9P0cM1GeD0LYEJ92ptq2qlTngTRS+k22CFRgh+06HHfKy0uhb38Xtr6yLiFwXFCoXrlhS483bqqg==
+
 "prettier@^1.18.2 || ^2.0.0":
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.7.1.tgz#e235806850d057f97bb08368a4f7d899f7760c64"

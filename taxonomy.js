@@ -24,6 +24,7 @@ module.exports = {
     { text: "クレジットカード", slug: "credit-card" },
     { text: "電子マネー", slug: "e-money" },
     { text: "QRコード決済", slug: "qr-code-clearing" },
+    { text: "ヤオコー", slug: "yaoko" },
   ],
   apps: [
     {
