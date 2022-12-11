@@ -7,7 +7,12 @@
     </div>
     <h1>{{ article.title }}</h1>
     <bread pageType="post" :title="article.title" :cat="article.category" />
-    <p class="date_txt">{{ $dayjs(article.updatedAt).format("YYYY/MM/DD") }}</p>
+    <p class="date_txt">
+      投稿日：{{ $dayjs(article.createdAt).format("YYYY/MM/DD") }}<br /><span
+        v-if="updateDateActive"
+        >更新日：{{ $dayjs(article.updatedAt).format("YYYY/MM/DD") }}</span
+      >
+    </p>
     <div class="tag">
       <nuxt-link
         v-for="(tag, i) in getTagName(article.tag)"
@@ -102,7 +107,8 @@ export default Vue.extend({
     return {
       articles_array: [],
       category: [...taxonomy.category],
-      tags: [...taxonomy.tags]
+      tags: [...taxonomy.tags],
+      updateDateActive: false
     }
   },
   async asyncData ({ $content, params, store }) {
@@ -154,6 +160,9 @@ export default Vue.extend({
     this.articles_array = this.shuffle(this.related_articles);
     this.deleteSamePost();
     this.articles_array.slice(0, 3);
+    if (this.$dayjs(this.article.updatedAt).format("YYYY/MM/DD") != this.$dayjs(this.article.createdAt).format("YYYY/MM/DD")) {
+      this.updateDateActive = true;
+    }
   }
 });
 </script>

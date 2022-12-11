@@ -8,7 +8,7 @@
         <p class="category">{{ getCatName(article.category) }}</p>
         <p class="title_txt">{{ article.title }}</p>
         <p class="date_txt">
-          {{ $dayjs(article.updatedAt).format("YYYY/MM/DD") }}
+          {{ $dayjs(article.createdAt).format("YYYY/MM/DD") }}
         </p>
         <p class="tag">
           <span v-for="tag in getTagName(article.tag)" :key="tag">{{
