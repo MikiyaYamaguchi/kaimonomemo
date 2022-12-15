@@ -31,6 +31,7 @@ export default {
         property: "og:url",
         content: "https://kaimonomemo.netlify.app",
       },
+      { hid: "og:image", property: "og:image", content: "/image/logo_ogp.jpg" },
       { hid: "og:title", property: "og:title", content: "買い物メモ" },
       {
         hid: "og:description",
@@ -43,6 +44,13 @@ export default {
         property: "og:image",
         content: "https://kaimonomemo.netlify.app",
       },
+      {
+        hid: "twitter:card",
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      { hid: "twitter:site", name: "twitter:site", content: "@Twitter" },
+      { hid: "twitter:image", content: "/image/logo_org.png" },
       { name: "format-detection", content: "telephone=no" },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
