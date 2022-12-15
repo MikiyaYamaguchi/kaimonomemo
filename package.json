@@ -39,6 +39,7 @@
     "@nuxt/types": "^2.9",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/google-adsense": "2.0.0",
+    "@nuxtjs/google-analytics": "^2.4.0",
     "imagemin-pngquant": "^9.0.2",
     "prettier-plugin-md-nocjsp": "^1.5.0"
   }

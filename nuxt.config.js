@@ -66,6 +66,7 @@ export default {
     // https://go.nuxtjs.dev/typescript
     "@nuxt/typescript-build",
     "@aceforth/nuxt-optimized-images",
+    "@nuxtjs/google-analytics",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -110,5 +111,14 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: [/^element-ui/],
+  },
+
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID,
+  },
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID,
+    },
   },
 };
