@@ -25,6 +25,10 @@ module.exports = {
     { text: "電子マネー", slug: "e-money" },
     { text: "QRコード決済", slug: "qr-code-clearing" },
     { text: "ヤオコー", slug: "yaoko" },
+    { text: "一人暮らし", slug: "living-alone" },
+    { text: "日用品", slug: "commodity" },
+    { text: "学生", slug: "student" },
+    { text: "引越し", slug: "home-moving" },
   ],
   apps: [
     {
