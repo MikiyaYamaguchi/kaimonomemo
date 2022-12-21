@@ -1,7 +1,3 @@
-[build]
-  command = "yarn && yarn testbuild"
-  publish = "public"
-
 [[redirects]]
   from = "https://kaimononosuke.netlify.app"
   to = "https://www.kaimononosuke.com"
