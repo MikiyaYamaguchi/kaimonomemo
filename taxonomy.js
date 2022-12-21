@@ -29,6 +29,7 @@ module.exports = {
     { text: "日用品", slug: "commodity" },
     { text: "学生", slug: "student" },
     { text: "引越し", slug: "home-moving" },
+    { text: "お惣菜", slug: "souzai" },
   ],
   apps: [
     {

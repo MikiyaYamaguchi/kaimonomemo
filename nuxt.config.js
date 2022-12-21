@@ -29,12 +29,12 @@ export default {
       {
         hid: "og:url",
         property: "og:url",
-        content: "https://kaimononosuke.netlify.app",
+        content: "https://www.kaimononosuke.com",
       },
       {
         hid: "og:image",
         property: "og:image",
-        content: "https://kaimononosuke.netlify.app/image/logo_ogp.jpg",
+        content: "https://www.kaimononosuke.com/image/logo_ogp.jpg",
       },
       { hid: "og:title", property: "og:title", content: "買い物メモ" },
       {
@@ -51,7 +51,7 @@ export default {
       { hid: "twitter:site", name: "twitter:site", content: "@Twitter" },
       {
         hid: "twitter:image",
-        content: "https://kaimononosuke.netlify.app/image/logo_org.png",
+        content: "https://www.kaimononosuke.com/image/logo_org.png",
       },
       { name: "format-detection", content: "telephone=no" },
     ],
@@ -100,7 +100,7 @@ export default {
   ],
 
   sitemap: {
-    hostname: process.env.BASE_URL || "https://kaimononosuke.netlify.app/",
+    hostname: process.env.BASE_URL || "https://www.kaimononosuke.com/",
     routes: async () => {
       const { $content } = require("@nuxt/content");
 
