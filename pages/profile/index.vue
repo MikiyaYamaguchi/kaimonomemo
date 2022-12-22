@@ -11,6 +11,19 @@
         </div>
         <div class="txt">
           <p class="name_txt">mikiya</p>
+          <p class="sns_icon">
+            <a
+              href="https://twitter.com/mikiya32131569"
+              target="_blank"
+              style="text-decoration: none"
+            >
+              <img
+                src="../../static/image/twitter.png"
+                alt="twitter"
+                style="max-width: 50px"
+              /><br /><span class="text-small">Twitterはこちら</span>
+            </a>
+          </p>
           <p>
             千葉県在住のWebエンジニア。<br />
             都内のWeb制作会社に勤務。<br /><br />
