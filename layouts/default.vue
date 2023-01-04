@@ -20,6 +20,16 @@
 import Vue from "vue";
 import "@/static/css/global.scss";
 export default Vue.extend({
+  head () {
+    return {
+      link: [
+        {
+          rel: "canonical",
+          href: `https://www.kaimononosuke.com${this.$route.path}`,
+        },
+      ],
+    }
+  },
   data () {
     return {
     };
