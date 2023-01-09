@@ -30,6 +30,8 @@ module.exports = {
     { text: "学生", slug: "student" },
     { text: "引越し", slug: "home-moving" },
     { text: "お惣菜", slug: "souzai" },
+    { text: "ふるさと納税", slug: "hurusato-nouzei" },
+    { text: "欲しいものリスト", slug: "hosimono-list" },
   ],
   apps: [
     {
