@@ -201,6 +201,12 @@ export default Vue.extend({
       list-style: none;
       width: 32%;
       margin-left: 2%;
+      margin-top: 2%;
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        margin-top: 0;
+      }
       a {
         display: block;
         width: 100%;
@@ -318,6 +324,7 @@ export default Vue.extend({
       li {
         width: 100%;
         margin-left: 0 !important;
+        margin-top: 0 !important;
         &:not(:last-child) {
           margin-bottom: 4%;
         }

@@ -3,6 +3,7 @@ module.exports = {
     { text: "便利ツール", slug: "tool" },
     { text: "節約", slug: "saving" },
     { text: "コラム", slug: "column" },
+    { text: "買い物レポート", slug: "report" },
   ],
   tags: [
     { text: "Webアプリ", slug: "web-app" },
@@ -32,6 +33,8 @@ module.exports = {
     { text: "お惣菜", slug: "souzai" },
     { text: "ふるさと納税", slug: "hurusato-nouzei" },
     { text: "欲しいものリスト", slug: "hosimono-list" },
+    { text: "ダイエット", slug: "diet" },
+    { text: "筋トレ", slug: "muscle-training" },
   ],
   apps: [
     {
