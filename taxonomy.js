@@ -35,6 +35,7 @@ module.exports = {
     { text: "欲しいものリスト", slug: "hosimono-list" },
     { text: "ダイエット", slug: "diet" },
     { text: "筋トレ", slug: "muscle-training" },
+    { text: "ロピア", slug: "lopia" },
   ],
   apps: [
     {
