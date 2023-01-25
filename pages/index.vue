@@ -2,13 +2,18 @@
   <div class="container top-container">
     <div class="main_visual">
       <figure>
-        <img src="../static/image/main_image.jpg" alt="かいものの助" />
-      </figure>
-      <h1>
-        買い物に関する情報や<br
+        <img
+          src="../static/image/main_image.jpg"
+          alt="かいものの助"
+          class="pc-only"
+        />
+        <img
+          src="../static/image/sp_main_image.jpg"
+          alt="かいものの助"
           class="sp-only"
-        />自作アプリを<br />発信するブログサイト
-      </h1>
+        />
+      </figure>
+      <h1>買い物に関する情報や自作アプリを<br />発信するブログサイト</h1>
     </div>
     <h2><i class="el-icon-mobile-phone"></i> アプリ</h2>
     <div class="app-container">
@@ -69,6 +74,37 @@
       </ul>
       <p v-else>記事がありません。</p>
     </div>
+    <div class="top_profile">
+      <div class="img_content">
+        <figure>
+          <img src="../static/image/profile.png" alt="mikiya" />
+        </figure>
+      </div>
+      <div class="txt_content">
+        <p class="name">mikiya</p>
+        <p class="sns_icon">
+          <a
+            href="https://twitter.com/mikiya32131569"
+            target="_blank"
+            style="text-decoration: none"
+          >
+            <img
+              src="../static/image/twitter.png"
+              alt="twitter"
+              style="max-width: 50px"
+            /><br /><span class="text-small">Twitterはこちら</span>
+          </a>
+        </p>
+        <p>
+          千葉県在住のWebエンジニア。都内のWeb制作会社に勤務。<br />
+          節約術やポイ活などに興味があり、いかに買い物を安く済ませるかを日々考えております。<br />
+          趣味は映画鑑賞。
+        </p>
+        <div class="btn_wrap">
+          <nuxt-link class="more_btn" to="/profile">もっと見る</nuxt-link>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -120,19 +156,18 @@ export default Vue.extend({
   }
   @media screen and (max-width: 815px) {
     h1 {
-      font-size: 15px;
+      font-size: 18px;
     }
   }
   @media screen and (max-width: 767px) {
     margin-bottom: 10%;
     h1 {
-      font-size: 14px;
-      bottom: 0;
+      bottom: 34%;
     }
   }
-  @media screen and (max-width: 440px) {
+  @media screen and (max-width: 540px) {
     h1 {
-      font-size: 12px;
+      font-size: 14px;
     }
   }
 }
@@ -283,6 +318,7 @@ export default Vue.extend({
   }
 }
 .tag-container {
+  margin-bottom: 10%;
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -299,6 +335,66 @@ export default Vue.extend({
         }
         &:hover {
           text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+.top_profile {
+  display: flex;
+  align-items: center;
+  .img_content {
+    width: 32%;
+    figure {
+      position: relative;
+      margin: 0;
+      height: 0;
+      padding-top: 100%;
+      overflow: hidden;
+      border: 1px solid #707070;
+      border-radius: 50%;
+      img {
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .txt_content {
+    width: 64%;
+    margin-left: 4%;
+    .name {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .btn_wrap {
+      text-align: right;
+      .more_btn {
+        margin-top: 2%;
+        display: inline-block;
+        text-align: right;
+        padding-right: 28px;
+        position: relative;
+        font-size: 13px;
+        text-decoration: none;
+        &:after {
+          content: "";
+          border-right: 1px solid #222;
+          border-bottom: 1px solid #222;
+          width: 18px;
+          height: 4px;
+          position: absolute;
+          top: 50%;
+          right: 5%;
+          margin: auto;
+          transform: translateY(-50%) skew(45deg);
         }
       }
     }
@@ -383,11 +479,23 @@ export default Vue.extend({
     }
   }
   .tag-container {
+    margin-bottom: 15%;
     ul {
       li {
         margin-right: 15px;
         font-size: 15px;
       }
+    }
+  }
+  .top_profile {
+    display: block;
+    .img_content {
+      width: 70%;
+      margin: 0 auto;
+    }
+    .txt_content {
+      width: 100%;
+      margin-left: 0;
     }
   }
 }
