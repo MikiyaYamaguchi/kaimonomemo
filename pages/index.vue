@@ -1,5 +1,15 @@
 <template>
   <div class="container top-container">
+    <div class="main_visual">
+      <figure>
+        <img src="../static/image/main_image.jpg" alt="かいものの助" />
+      </figure>
+      <h1>
+        買い物に関する情報や<br
+          class="sp-only"
+        />自作アプリを<br />発信するブログサイト
+      </h1>
+    </div>
     <h2><i class="el-icon-mobile-phone"></i> アプリ</h2>
     <div class="app-container">
       <ul v-if="apps.length != 0">
@@ -88,6 +98,44 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+.main_visual {
+  position: relative;
+  margin-bottom: 5%;
+  figure {
+    margin: 0;
+    img {
+      max-width: 100%;
+    }
+  }
+  h1 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e58b00;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20%;
+    margin: auto;
+  }
+  @media screen and (max-width: 815px) {
+    h1 {
+      font-size: 15px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    margin-bottom: 10%;
+    h1 {
+      font-size: 14px;
+      bottom: 0;
+    }
+  }
+  @media screen and (max-width: 440px) {
+    h1 {
+      font-size: 12px;
+    }
+  }
+}
 .top-container {
   h2 {
     font-size: 28px;
