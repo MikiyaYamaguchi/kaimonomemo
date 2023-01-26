@@ -24,7 +24,7 @@ export default {
         content:
           "買い物,ショッピング,情報,ブログ,Webアプリ,便利アプリ,お役立ち情報",
       },
-      { hid: "og:site_name", property: "og:site_name", content: "買い物メモ" },
+      { hid: "og:site_name", property: "og:site_name", content: "かいものの助" },
       { hid: "og:type", property: "og:type", content: "website" },
       {
         hid: "og:url",
@@ -36,7 +36,7 @@ export default {
         property: "og:image",
         content: "https://www.kaimononosuke.com/image/logo_ogp.jpg",
       },
-      { hid: "og:title", property: "og:title", content: "買い物メモ" },
+      { hid: "og:title", property: "og:title", content: "かいものの助" },
       {
         hid: "og:description",
         property: "og:description",
