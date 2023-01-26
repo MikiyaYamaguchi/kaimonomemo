@@ -114,6 +114,30 @@ import taxonomy from "../taxonomy";
 export default Vue.extend({
   layout: "default",
   name: 'IndexPage',
+  head () {
+    return {
+      title: 'かいものの助 | 買い物に関する便利な情報やアプリをお届けするサイト',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: '買い物に関する便利な情報や便利な自作アプリをお届けするサイトです。日常に欠かせない「買い物」に関する情報や、Webエンジニアとしての技術をたくさんの人に共有したいという思いでサイトを立ち上げました。このサイトが「買い物」の分野において、皆さんの役に立つことを願っています。'
+        },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: '買い物,ショッピング,情報,ブログ,Webアプリ,便利アプリ,お役立ち情報'
+        },
+        { hid: "og:title", property: "og:title", content: "プロフィール | かいものの助" },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content:
+            "買い物に関する便利な情報や便利な自作アプリをお届けするサイトです。日常に欠かせない「買い物」に関する情報や、Webエンジニアとしての技術をたくさんの人に共有したいという思いでサイトを立ち上げました。このサイトが「買い物」の分野において、皆さんの役に立つことを願っています。",
+        }
+      ],
+    }
+  },
   data () {
     return {
       category: [...taxonomy.category],
