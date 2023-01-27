@@ -22,7 +22,7 @@ export default {
         hid: "keywords",
         name: "keywords",
         content:
-          "買い物,ショッピング,情報,ブログ,Webアプリ,便利アプリ,お役立ち情報",
+          "買い物,ショッピング,情報,ブログ,アプリ,Webアプリ,便利アプリ,お役立ち情報",
       },
       { hid: "og:site_name", property: "og:site_name", content: "かいものの助" },
       { hid: "og:type", property: "og:type", content: "website" },
