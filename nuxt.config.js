@@ -36,7 +36,7 @@ export default {
         property: "og:image",
         content: "https://www.kaimononosuke.com/image/logo_ogp.jpg",
       },
-      { hid: "og:title", property: "og:title", content: "かいものの助" },
+      { hid: "og:title", property: "og:title", content: "かいものの助 | 買い物に関する便利な情報やアプリをお届けするサイト" },
       {
         hid: "og:description",
         property: "og:description",

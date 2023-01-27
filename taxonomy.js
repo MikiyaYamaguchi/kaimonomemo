@@ -6,9 +6,11 @@ module.exports = {
     { text: "買い物レポート", slug: "report" },
   ],
   tags: [
+    { text: "モバイルアプリ", slug: "mobile-app" },
     { text: "Webアプリ", slug: "web-app" },
     { text: "自作アプリ", slug: "self-made-app" },
     { text: "買い物リスト", slug: "kaimono-list" },
+    { text: "便利", slug: "convenience" },
     { text: "レシピ", slug: "recipe" },
     { text: "献立", slug: "menu" },
     { text: "安い", slug: "cheap" },
@@ -33,9 +35,11 @@ module.exports = {
     { text: "お惣菜", slug: "souzai" },
     { text: "ふるさと納税", slug: "hurusato-nouzei" },
     { text: "欲しいものリスト", slug: "hosimono-list" },
+    { text: "コストコ", slug: "costco" },
     { text: "ダイエット", slug: "diet" },
     { text: "筋トレ", slug: "muscle-training" },
     { text: "ロピア", slug: "lopia" },
+    { text: "チラシ", slug: "flyer" },
   ],
   apps: [
     {

@@ -128,7 +128,7 @@ export default Vue.extend({
           name: 'keywords',
           content: '買い物,ショッピング,情報,ブログ,Webアプリ,便利アプリ,お役立ち情報'
         },
-        { hid: "og:title", property: "og:title", content: "プロフィール | かいものの助" },
+        { hid: "og:title", property: "og:title", content: "かいものの助 | 買い物に関する便利な情報やアプリをお届けするサイト" },
         {
           hid: "og:description",
           property: "og:description",
