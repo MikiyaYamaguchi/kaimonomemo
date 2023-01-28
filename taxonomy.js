@@ -40,6 +40,7 @@ module.exports = {
     { text: "筋トレ", slug: "muscle-training" },
     { text: "ロピア", slug: "lopia" },
     { text: "チラシ", slug: "flyer" },
+    { text: "買い物アプリ", slug: "shopping_app" },
   ],
   apps: [
     {
