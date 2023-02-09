@@ -281,6 +281,7 @@ h4 {
 a {
   color: #222;
   text-decoration: underline;
+  word-break: break-all;
   &:hover {
     text-decoration: none;
   }
@@ -453,6 +454,10 @@ a {
   width: 23.5%;
 }
 
+.flex_wrap > .span_5 {
+  width: 34%;
+}
+
 .flex_wrap > *:not(:first-child) {
   margin-left: 2%;
 }
@@ -539,4 +544,15 @@ a {
 
 .marker {
   background: linear-gradient(transparent 60%, #ffff66 60%);
+}
+
+@media screen and (max-width: 767px) {
+  .responsive-scroll {
+    overflow: scroll;
+  }
+
+  .responsive-scroll table {
+    width: 800px;
+    overflow-x: scroll;
+  }
 }
