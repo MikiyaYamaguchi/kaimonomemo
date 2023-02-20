@@ -350,16 +350,21 @@ export default Vue.extend({
     li {
       list-style: none;
       display: inline-block;
-      margin-right: 30px;
-      font-size: 18px;
+      margin: 0 10px 10px 0;
+      font-size: 15px;
+      border: 1px solid #ffa500;
+      color: #fff;
+      padding: 0.1em 0.6em;
+      border-radius: 4px;
+      transition: 0.3s;
       a {
         text-decoration: none;
         &:before {
           content: "#";
         }
-        &:hover {
-          text-decoration: underline;
-        }
+      }
+      &:hover {
+        background: #ffa500;
       }
     }
   }
