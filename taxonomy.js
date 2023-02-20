@@ -33,6 +33,7 @@ module.exports = {
     { text: "角上魚類", slug: "kakujoe" },
     { text: "日用品", slug: "commodity" },
     { text: "学生", slug: "student" },
+    { text: "新鮮", slug: "fresh" },
     { text: "引越し", slug: "home-moving" },
     { text: "お惣菜", slug: "souzai" },
     { text: "ふるさと納税", slug: "hurusato-nouzei" },
