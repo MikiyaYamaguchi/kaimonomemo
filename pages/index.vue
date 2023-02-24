@@ -57,7 +57,10 @@
       <ul v-if="category != 0">
         <li v-for="cat in category" :key="cat.slug">
           <nuxt-link :to="`/category/${cat.slug}`">
-            {{ cat.text }}
+            <span class="inner">
+              <span :class="`${cat.slug} cat_img`"></span>
+              {{ cat.text }}
+            </span>
           </nuxt-link>
         </li>
       </ul>
@@ -318,19 +321,52 @@ export default Vue.extend({
         display: block;
         width: 100%;
         height: 100%;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: bold;
         background: #fff;
         -ms-box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.1);
         box-shadow: 1px 1px 4px 2px rgb(0 0 0 / 10%);
-        border-left: 8px solid #ffa500;
         transition: 0.2s;
         text-decoration: none;
-        padding: 6% 6% 6% calc(8px + 6%);
-        &:hover {
-          border-color: #ffd700;
+        padding: 5px;
+        .inner {
+          display: block;
+          padding: 6%;
+          border: 1px solid #ffa500;
+          text-align: center;
+          transition: 0.2s;
+          .cat_img {
+            display: block;
+            height: 0;
+            padding-top: 30%;
+            overflow: hidden;
+            max-width: 130px;
+            margin: 0 auto 4%;
+            &.tool {
+              background: url(../static/image/app.svg) no-repeat center/contain;
+            }
+            &.saving {
+              background: url(../static/image/setsuyaku.svg) no-repeat
+                center/contain;
+            }
+            &.column {
+              background: url(../static/image/column.png) no-repeat
+                center/contain;
+              max-width: 60px;
+            }
+            &.report {
+              background: url(../static/image/kaimono.png) no-repeat
+                center/contain;
+              max-width: 60px;
+            }
+          }
         }
         @media screen and (max-width: 767px) {
+          &:hover {
+            .inner {
+              border-color: #ffd700;
+            }
+          }
           font-size: 16px;
           font-weight: 600;
         }
@@ -354,17 +390,24 @@ export default Vue.extend({
       font-size: 15px;
       border: 1px solid #ffa500;
       color: #fff;
-      padding: 0.1em 0.6em;
       border-radius: 4px;
-      transition: 0.3s;
+      transition: 0.2s;
       a {
         text-decoration: none;
+        padding: 0.2em 0.6em;
+        display: block;
         &:before {
           content: "#";
         }
       }
-      &:hover {
-        background: #ffa500;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    ul {
+      li {
+        &:hover {
+          background: #ffa500;
+        }
       }
     }
   }
@@ -493,16 +536,38 @@ export default Vue.extend({
   .cat-container {
     margin-bottom: 10%;
     ul {
-      display: block;
       li {
-        width: 100%;
-        margin-left: 0 !important;
+        width: 49%;
         margin-top: 0 !important;
+        margin-left: 2%;
+        &:nth-child(3n + 1) {
+          margin-left: 2%;
+        }
+        &:nth-child(2n + 1) {
+          margin-left: 0;
+        }
         &:not(:last-child) {
           margin-bottom: 4%;
         }
         a {
-          padding: 3% 3% 3% calc(8px + 3%);
+          padding: 5px;
+          height: auto;
+          font-size: 15px;
+          .inner {
+            .cat_img {
+              margin: 0 auto 8%;
+              padding-top: 45%;
+              &.saving {
+                max-width: 100px;
+              }
+              &.column {
+                max-width: 40px;
+              }
+              &.report {
+                max-width: 50px;
+              }
+            }
+          }
         }
       }
     }
