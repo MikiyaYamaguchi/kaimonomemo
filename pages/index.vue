@@ -361,7 +361,7 @@ export default Vue.extend({
             }
           }
         }
-        @media screen and (max-width: 767px) {
+        @media screen and (min-width: 768px) {
           &:hover {
             .inner {
               border-color: #ffd700;
