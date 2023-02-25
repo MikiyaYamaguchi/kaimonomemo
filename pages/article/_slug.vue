@@ -50,7 +50,7 @@
       <div class="ad">
         <adsbygoogle
           :ad-slot="'1207627504'"
-          :ad-style="{ display: 'block' }"
+          :ad-style="{ display: 'block', width: '100%', margin: '0 auto' }"
           :ad-format="'rectangle'"
         />
       </div>
@@ -58,7 +58,7 @@
       <div class="ad">
         <adsbygoogle
           :ad-slot="'8985496438'"
-          :ad-style="{ display: 'block' }"
+          :ad-style="{ display: 'block', width: '100%', margin: '0 auto' }"
           :ad-format="'rectangle'"
         />
       </div>

@@ -18,7 +18,7 @@
     <div class="ad">
       <adsbygoogle
         :ad-slot="'1043975974'"
-        :ad-style="{ display: 'block' }"
+        :ad-style="{ display: 'block', width: '100%', margin: '0 auto' }"
         :ad-format="'rectangle'"
       />
     </div>
@@ -62,7 +62,7 @@
     <div class="ad">
       <adsbygoogle
         :ad-slot="'8730894304'"
-        :ad-style="{ display: 'block' }"
+        :ad-style="{ display: 'block', width: '100%', margin: '0 auto' }"
         :ad-format="'rectangle'"
       />
     </div>
@@ -125,7 +125,7 @@
     <div class="ad">
       <adsbygoogle
         :ad-slot="'8981627001'"
-        :ad-style="{ display: 'block' }"
+        :ad-style="{ display: 'block', width: '100%', margin: '0 auto' }"
         :ad-format="'rectangle'"
       />
     </div>
