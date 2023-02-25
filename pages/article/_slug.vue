@@ -47,7 +47,21 @@
           </li>
         </ul>
       </div>
+      <div class="ad">
+        <adsbygoogle
+          :ad-slot="'1207627504'"
+          :ad-style="{ display: 'block' }"
+          :ad-format="'rectangle'"
+        />
+      </div>
       <nuxt-content :document="article" />
+      <div class="ad">
+        <adsbygoogle
+          :ad-slot="'8985496438'"
+          :ad-style="{ display: 'block' }"
+          :ad-format="'rectangle'"
+        />
+      </div>
       <SnsShareButton :text="article.title" />
       <h2>関連記事</h2>
       <ArticleList

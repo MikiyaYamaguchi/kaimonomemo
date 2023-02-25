@@ -556,3 +556,7 @@ a {
     overflow-x: scroll;
   }
 }
+
+.ad:not(:last-child) {
+  margin-bottom: 4%;
+}

@@ -15,6 +15,13 @@
       </figure>
       <h1>買い物に関する情報や自作アプリを<br />発信するブログサイト</h1>
     </div>
+    <div class="ad">
+      <adsbygoogle
+        :ad-slot="'1043975974'"
+        :ad-style="{ display: 'block' }"
+        :ad-format="'rectangle'"
+      />
+    </div>
     <h2><i class="el-icon-mobile-phone"></i> アプリ</h2>
     <div class="app-container">
       <ul v-if="apps.length != 0">
@@ -51,6 +58,13 @@
       <div class="btn_wrap">
         <nuxt-link class="more_btn" to="/new_post">もっと見る</nuxt-link>
       </div>
+    </div>
+    <div class="ad">
+      <adsbygoogle
+        :ad-slot="'8730894304'"
+        :ad-style="{ display: 'block' }"
+        :ad-format="'rectangle'"
+      />
     </div>
     <h2><i class="el-icon-folder"></i> カテゴリー</h2>
     <div class="cat-container">
@@ -107,6 +121,13 @@
           <nuxt-link class="more_btn" to="/profile">もっと見る</nuxt-link>
         </div>
       </div>
+    </div>
+    <div class="ad">
+      <adsbygoogle
+        :ad-slot="'8981627001'"
+        :ad-style="{ display: 'block' }"
+        :ad-format="'rectangle'"
+      />
     </div>
   </div>
 </template>
