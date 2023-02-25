@@ -436,6 +436,7 @@ export default Vue.extend({
 .top_profile {
   display: flex;
   align-items: center;
+  margin-bottom: 5%;
   .img_content {
     width: 32%;
     figure {
@@ -604,6 +605,7 @@ export default Vue.extend({
   }
   .top_profile {
     display: block;
+    margin-bottom: 10%;
     .img_content {
       width: 70%;
       margin: 0 auto;
