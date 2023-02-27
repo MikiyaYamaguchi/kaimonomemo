@@ -20,6 +20,7 @@
         :ad-slot="'1043975974'"
         :ad-style="{ display: 'block' }"
         :ad-format="'auto'"
+        data-full-width-responsive="false"
       />
     </div>
     <h2><i class="el-icon-mobile-phone"></i> アプリ</h2>
@@ -127,6 +128,7 @@
         :ad-slot="'8981627001'"
         :ad-style="{ display: 'block' }"
         :ad-format="'auto'"
+        data-full-width-responsive="false"
       />
     </div>
   </div>

@@ -52,6 +52,7 @@
           :ad-slot="'1207627504'"
           :ad-style="{ display: 'block' }"
           :ad-format="'auto'"
+          data-full-width-responsive="false"
         />
       </div>
       <nuxt-content :document="article" />
@@ -60,6 +61,7 @@
           :ad-slot="'8985496438'"
           :ad-style="{ display: 'block' }"
           :ad-format="'auto'"
+          data-full-width-responsive="false"
         />
       </div>
       <SnsShareButton :text="article.title" />

@@ -8,6 +8,7 @@
           :ad-slot="'4655933830'"
           :ad-style="{ display: 'block' }"
           :ad-format="'auto'"
+          data-full-width-responsive="false"
         />
       </div>
       <div class="row">
@@ -18,6 +19,7 @@
           :ad-slot="'1016055811'"
           :ad-style="{ display: 'block' }"
           :ad-format="'auto'"
+          data-full-width-responsive="false"
         />
       </div>
     </section>
