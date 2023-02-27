@@ -7,7 +7,7 @@
         <adsbygoogle
           :ad-slot="'4655933830'"
           :ad-style="{ display: 'block', width: '100%', margin: '0 auto' }"
-          :ad-format="'rectangle'"
+          ad-format=""
         />
       </div>
       <div class="row">
@@ -17,7 +17,7 @@
         <adsbygoogle
           :ad-slot="'1016055811'"
           :ad-style="{ display: 'block', width: '100%', margin: '0 auto' }"
-          :ad-format="'rectangle'"
+          ad-format=""
         />
       </div>
     </section>

@@ -3,8 +3,22 @@
     <h1>新着一覧</h1>
     <bread pageType="page" title="新着一覧" cat="" />
     <section>
+      <div class="ad">
+        <adsbygoogle
+          :ad-slot="'4655933830'"
+          :ad-style="{ display: 'block', width: '100%', margin: '0 auto' }"
+          ad-format=""
+        />
+      </div>
       <div class="row">
         <article-list :articles="posts" />
+      </div>
+      <div class="ad">
+        <adsbygoogle
+          :ad-slot="'1016055811'"
+          :ad-style="{ display: 'block', width: '100%', margin: '0 auto' }"
+          ad-format=""
+        />
       </div>
     </section>
     <Pagination

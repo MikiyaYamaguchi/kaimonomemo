@@ -51,7 +51,7 @@
         <adsbygoogle
           :ad-slot="'1207627504'"
           :ad-style="{ display: 'block', width: '100%', margin: '0 auto' }"
-          :ad-format="'rectangle'"
+          ad-format=""
         />
       </div>
       <nuxt-content :document="article" />
@@ -59,7 +59,7 @@
         <adsbygoogle
           :ad-slot="'8985496438'"
           :ad-style="{ display: 'block', width: '100%', margin: '0 auto' }"
-          :ad-format="'rectangle'"
+          ad-format=""
         />
       </div>
       <SnsShareButton :text="article.title" />

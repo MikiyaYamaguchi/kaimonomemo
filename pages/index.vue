@@ -19,7 +19,7 @@
       <adsbygoogle
         :ad-slot="'1043975974'"
         :ad-style="{ display: 'block', width: '100%', margin: '0 auto' }"
-        :ad-format="'rectangle'"
+        ad-format=""
       />
     </div>
     <h2><i class="el-icon-mobile-phone"></i> アプリ</h2>
@@ -63,7 +63,7 @@
       <adsbygoogle
         :ad-slot="'8730894304'"
         :ad-style="{ display: 'block', width: '100%', margin: '0 auto' }"
-        :ad-format="'rectangle'"
+        ad-format=""
       />
     </div>
     <h2><i class="el-icon-folder"></i> カテゴリー</h2>
@@ -126,7 +126,7 @@
       <adsbygoogle
         :ad-slot="'8981627001'"
         :ad-style="{ display: 'block', width: '100%', margin: '0 auto' }"
-        :ad-format="'rectangle'"
+        ad-format=""
       />
     </div>
   </div>
