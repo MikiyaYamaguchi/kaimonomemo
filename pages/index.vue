@@ -65,6 +65,7 @@
         :ad-slot="'8730894304'"
         :ad-style="{ display: 'block' }"
         :ad-format="'auto'"
+        data-full-width-responsive="false"
       />
     </div>
     <h2><i class="el-icon-folder"></i> カテゴリー</h2>
