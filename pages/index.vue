@@ -18,8 +18,8 @@
     <div class="ad">
       <adsbygoogle
         :ad-slot="'1043975974'"
-        :ad-style="{ display: 'block', width: '100%', margin: '0 auto' }"
-        ad-format=""
+        :ad-style="{ display: 'block' }"
+        :ad-format="'auto'"
       />
     </div>
     <h2><i class="el-icon-mobile-phone"></i> アプリ</h2>
@@ -62,8 +62,8 @@
     <div class="ad">
       <adsbygoogle
         :ad-slot="'8730894304'"
-        :ad-style="{ display: 'block', width: '100%', margin: '0 auto' }"
-        ad-format=""
+        :ad-style="{ display: 'block' }"
+        :ad-format="'auto'"
       />
     </div>
     <h2><i class="el-icon-folder"></i> カテゴリー</h2>
@@ -125,8 +125,8 @@
     <div class="ad">
       <adsbygoogle
         :ad-slot="'8981627001'"
-        :ad-style="{ display: 'block', width: '100%', margin: '0 auto' }"
-        ad-format=""
+        :ad-style="{ display: 'block' }"
+        :ad-format="'auto'"
       />
     </div>
   </div>

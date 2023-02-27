@@ -6,8 +6,8 @@
       <div class="ad">
         <adsbygoogle
           :ad-slot="'4655933830'"
-          :ad-style="{ display: 'block', width: '100%', margin: '0 auto' }"
-          ad-format=""
+          :ad-style="{ display: 'block' }"
+          :ad-format="'auto'"
         />
       </div>
       <div class="row">
@@ -16,8 +16,8 @@
       <div class="ad">
         <adsbygoogle
           :ad-slot="'1016055811'"
-          :ad-style="{ display: 'block', width: '100%', margin: '0 auto' }"
-          ad-format=""
+          :ad-style="{ display: 'block' }"
+          :ad-format="'auto'"
         />
       </div>
     </section>
