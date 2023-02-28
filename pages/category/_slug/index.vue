@@ -56,6 +56,9 @@ export default Vue.extend({
       const end = this.currentPage * this.parPage;
       const start = end - this.parPage;
       return this.articles.slice(start, end);
+    },
+    getPageCount: function () {
+      return Math.ceil(this.articles.length / this.parPage);
     }
   },
   async asyncData ({ store, $content, params }) {

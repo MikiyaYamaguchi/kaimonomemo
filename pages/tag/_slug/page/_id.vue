@@ -1,10 +1,26 @@
 <template>
   <div class="container">
-    <h1>{{ getTagName[0] }}</h1>
-    <bread pageType="tag" :title="getTagName[0]" cat="" />
+    <h1>{{ getTagName($route.params.slug) }}</h1>
+    <bread pageType="tag" :title="getTagName($route.params.slug)" cat="" />
     <section>
+      <div class="ad">
+        <adsbygoogle
+          :ad-slot="'4655933830'"
+          :ad-style="{ display: 'block' }"
+          :ad-format="'auto'"
+          data-full-width-responsive="false"
+        />
+      </div>
       <div class="row">
         <article-list :articles="posts" />
+      </div>
+      <div class="ad">
+        <adsbygoogle
+          :ad-slot="'1016055811'"
+          :ad-style="{ display: 'block' }"
+          :ad-format="'auto'"
+          data-full-width-responsive="false"
+        />
       </div>
     </section>
     <Pagination
@@ -19,14 +35,20 @@
 
 <script>
 import Vue from "vue";
+import taxonomy from "@/taxonomy";
 export default Vue.extend({
   layout: "default",
   head () {
     return {
-      title: `${this.getTagName} | かいものの助`,
+      title: `${this.getTagName(this.$route.params.slug)} | かいものの助`,
       meta: [
-        { hid: "og:title", property: "og:title", content: `${this.getTagName} | かいものの助` },
+        { hid: "og:title", property: "og:title", content: `${this.getTagName(this.$route.params.slug)} | かいものの助` },
       ]
+    }
+  },
+  data () {
+    return {
+      tags: [...taxonomy.tags]
     }
   },
   computed: {
@@ -37,9 +59,6 @@ export default Vue.extend({
     },
     getPageCount: function () {
       return Math.ceil(this.articles.length / this.parPage);
-    },
-    getTagName () {
-      return this.$store.getters.getTagName([this.$route.params.slug]);
     }
   },
   async asyncData ({ store, $content, params }) {
@@ -60,5 +79,10 @@ export default Vue.extend({
       selectedTag,
     }
   },
+  methods: {
+    getTagName (tag) {
+      return this.tags.find((v) => v.slug === tag).text;
+    },
+  }
 })
 </script>

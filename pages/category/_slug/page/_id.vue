@@ -3,8 +3,24 @@
     <h1>{{ getCatName($route.params.slug) }}</h1>
     <bread pageType="category" :title="getCatName($route.params.slug)" cat="" />
     <section>
+      <div class="ad">
+        <adsbygoogle
+          :ad-slot="'4655933830'"
+          :ad-style="{ display: 'block' }"
+          :ad-format="'auto'"
+          data-full-width-responsive="false"
+        />
+      </div>
       <div class="row">
         <article-list :articles="posts" />
+      </div>
+      <div class="ad">
+        <adsbygoogle
+          :ad-slot="'1016055811'"
+          :ad-style="{ display: 'block' }"
+          :ad-format="'auto'"
+          data-full-width-responsive="false"
+        />
       </div>
     </section>
     <Pagination
@@ -40,6 +56,9 @@ export default Vue.extend({
       const end = this.currentPage * this.parPage;
       const start = end - this.parPage;
       return this.articles.slice(start, end);
+    },
+    getPageCount: function () {
+      return Math.ceil(this.articles.length / this.parPage);
     }
   },
   async asyncData ({ store, $content, params }) {
